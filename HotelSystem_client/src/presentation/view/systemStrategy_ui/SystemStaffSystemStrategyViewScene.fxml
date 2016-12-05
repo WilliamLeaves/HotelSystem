@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.controller.systemstrategyController.SystemStaffSystemStrategyViewController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="600.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane>
+               <children>
+                  <ImageView fx:id="myPicture" fitHeight="150.0" fitWidth="200.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label layoutX="33.0" layoutY="180.0" text="ID" />
+                  <Label fx:id="leftIdLabel" layoutX="95.0" layoutY="180.0" text="Label" />
+                  <Label layoutX="33.0" layoutY="210.0" text="姓名" />
+                  <Label fx:id="leftNameLabel" layoutX="95.0" layoutY="210.0" text="Label" />
+                  <Label layoutX="33.0" layoutY="240.0" text="身份" />
+                  <Label layoutX="95.0" layoutY="240.0" text="网站营销人员" />
+                  <Button fx:id="modifyStrategy" layoutX="10.0" layoutY="290.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="200.0" text="修改策略信息" />
+                  <Button fx:id="viewMemberDiscount" layoutX="10.0" layoutY="340.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="200.0" text="查看会员优惠" />
+                  <Button fx:id="back" layoutX="11.0" layoutY="553.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="200.0" text="返回" />
+                  <Button fx:id="viewFestivelDiscount" layoutX="10.0" layoutY="390.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="200.0" text="查看节日优惠" />
+                  <Button fx:id="viewOtherDiscount" layoutX="10.0" layoutY="440.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="200.0" text="查看其他优惠" />
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                  <Label fx:id="buttonLabel" layoutX="75.0" layoutY="33.0" text="Label(随左边的按钮而改变)">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="563.0" prefHeight="28.0" prefWidth="506.0" text="状态栏" />
+                  <TableView fx:id="systemStrategyTable" layoutX="40.0" layoutY="78.0" prefHeight="464.0" prefWidth="458.0">
+                     <columns>
+                        <TableColumn fx:id="nameOfStrategy" prefWidth="146.0" text="优惠名称" />
+                        <TableColumn fx:id="descriptionOfStrategy" prefWidth="158.0" text="优惠描述" />
+                        <TableColumn fx:id="stateOfStrategy" prefWidth="121.0" text="状态" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
