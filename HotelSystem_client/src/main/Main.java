@@ -57,8 +57,9 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("HotelSystem");
+		this.initRootLayout();
 		// initRootLayout();
-		this.showCustomerInfoScene(new CustomerVO());
+		// this.showCustomerInfoScene(new CustomerVO());
 		// this.showHotelStaffInfoScene(new HotelStaffVO());
 		// this.showSystemStaffInfoScene(new SystemStaffVO());
 		// this.showSystemManagerInfoScene(new SystemManagerVO());
@@ -66,6 +67,7 @@ public class Main extends Application {
 		// this.showCustomerHotelViewScene(new CustomerVO());
 		// this.showCustomerMainScene(new CustomerVO());
 		// this.showLoginScene();
+		this.showHotelStaffMainScene(new HotelStaffVO());
 	}
 
 	public void Exit() {
@@ -144,7 +146,7 @@ public class Main extends Application {
 	 */
 	public void showCustomerModifyScene(CustomerVO customer) {
 		try {
-
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("/presentation/view/userInfo_ui/CustomerInfoModifyScene.fxml"));
 			AnchorPane customerInfoModifyScene = (AnchorPane) loader.load();
@@ -167,6 +169,7 @@ public class Main extends Application {
 	 */
 	public void showCustomerPasswordModifyScene(CustomerVO customer) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(
 					Main.class.getResource("/presentation/view/userInfo_ui/CustomerPasswordModifyScene.fxml"));
@@ -190,6 +193,7 @@ public class Main extends Application {
 	 */
 	public void showCustomerMemberModifyScene(CustomerVO customer) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("/presentation/view/userInfo_ui/CustomerMemberModifyScene.fxml"));
 			AnchorPane customerMemberModifyScene = (AnchorPane) loader.load();
@@ -212,6 +216,8 @@ public class Main extends Application {
 	 */
 	public void showHotelStaffInfoScene(HotelStaffVO hotelStaff) {
 		try {
+			this.initRootLayout();
+
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("/presentation/view/userInfo_ui/HotelStaffInfoScene.fxml"));
 			AnchorPane HotelStaffInfoScene = (AnchorPane) loader.load();
@@ -234,6 +240,7 @@ public class Main extends Application {
 	 */
 	public void showHotelStaffInfoModifyScene(HotelStaffVO hotelStaff) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("/presentation/view/userInfo_ui/HotelStaffInfoModifyScene.fxml"));
 			AnchorPane HotelStaffInfoModifyScene = (AnchorPane) loader.load();
@@ -256,6 +263,7 @@ public class Main extends Application {
 	 */
 	public void showHotelStaffPasswordModifyScene(HotelStaffVO hotelStaff) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(
 					Main.class.getResource("/presentation/view/userInfo_ui/HotelStaffPasswordModifyScene.fxml"));
@@ -270,151 +278,6 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
-
-	/**
-	 * show 显示网站营销人员维护个人信息界面
-	 * 
-	 * @param systemStaff
-	 *            接受从其他界面传来的SystemStaffVO 对象作为参数
-	 */
-	// public void showSystemStaffInfoScene(SystemStaffVO systemStaff) {
-	// try {
-	// FXMLLoader loader = new FXMLLoader();
-	// loader.setLocation(Main.class.getResource("/presentation/view/userInfo_ui/SystemStaffInfoScene.fxml"));
-	// AnchorPane SystemStaffInfoModifyScene = (AnchorPane) loader.load();
-	// rootLayout.setCenter(SystemStaffInfoModifyScene);
-	//
-	// // get Controller
-	// SystemStaffInfoController SystemStaffInfoController =
-	// loader.getController();
-	// SystemStaffInfoController.initialize(this, systemStaff);
-	// } catch (IOException e) {
-	// // TODO Auto-generated catch block
-	// e.printStackTrace();
-	// }
-	// }
-	//
-	// /**
-	// * show 显示网站营销人员修改个人信息界面
-	// *
-	// * @param systemStaff
-	// * 接受从其他界面传来的SystemStaffVO 对象作为参数
-	// */
-	// public void showSystemStaffInfoModifyScene(SystemStaffVO systemStaff) {
-	// try {
-	// FXMLLoader loader = new FXMLLoader();
-	// loader.setLocation(
-	// Main.class.getResource("/presentation/view/userInfo_ui/SystemStaffInfoModifyScene.fxml"));
-	// AnchorPane SystemStaffInfoModifyScene = (AnchorPane) loader.load();
-	// rootLayout.setCenter(SystemStaffInfoModifyScene);
-	//
-	// // get Controller
-	// SystemStaffInfoModifyController SystemStaffInfoModifyController =
-	// loader.getController();
-	// SystemStaffInfoModifyController.initialize(this, systemStaff);
-	// } catch (IOException e) {
-	// // TODO Auto-generated catch block
-	// e.printStackTrace();
-	// }
-	// }
-	//
-	// /**
-	// * show 显示网站营销人员修改密码界面
-	// *
-	// * @param systemStaff
-	// * 接受从其他界面传来的SystemStaffVO 对象作为参数
-	// */
-	// public void showSystemStaffPasswordModifyScene(SystemStaffVO systemStaff)
-	// {
-	// try {
-	// FXMLLoader loader = new FXMLLoader();
-	// loader.setLocation(
-	// Main.class.getResource("/presentation/view/userInfo_ui/SystemStaffPasswordModifyScene.fxml"));
-	// AnchorPane SystemStaffPasswordModifyScene = (AnchorPane) loader.load();
-	// rootLayout.setCenter(SystemStaffPasswordModifyScene);
-	//
-	// // get Controller
-	// SystemStaffPasswordModifyController SystemStaffPasswordModifyController =
-	// loader.getController();
-	// SystemStaffPasswordModifyController.initialize(this, systemStaff);
-	// } catch (IOException e) {
-	// // TODO Auto-generated catch block
-	// e.printStackTrace();
-	// }
-	// }
-	//
-	// /**
-	// * show 显示网站营销人员维护个人信息界面
-	// *
-	// * @param systemManager
-	// * 接受从其他界面传来的SystemManagerVO 对象作为参数
-	// */
-	// public void showSystemManagerInfoScene(SystemManagerVO systemManager) {
-	// try {
-	// FXMLLoader loader = new FXMLLoader();
-	// loader.setLocation(Main.class.getResource("/presentation/view/userInfo_ui/SystemManagerInfoScene.fxml"));
-	// AnchorPane SystemManagerInfoScene = (AnchorPane) loader.load();
-	// rootLayout.setCenter(SystemManagerInfoScene);
-	//
-	// // get Controller
-	// SystemManagerInfoController SystemManagerInfoController =
-	// loader.getController();
-	// SystemManagerInfoController.initialize(this, systemManager);
-	// } catch (IOException e) {
-	// // TODO Auto-generated catch block
-	// e.printStackTrace();
-	// }
-	// }
-	//
-	// /**
-	// * show 显示网站营销人员修改个人信息界面
-	// *
-	// * @param systemManager
-	// * 接受从其他界面传来的SystemManagerVO 对象作为参数
-	// */
-	// public void showSystemManagerInfoModifyScene(SystemManagerVO
-	// systemManager) {
-	// try {
-	// FXMLLoader loader = new FXMLLoader();
-	// loader.setLocation(
-	// Main.class.getResource("/presentation/view/userInfo_ui/SystemManagerInfoModifyScene.fxml"));
-	// AnchorPane SystemManagerInfoModifyScene = (AnchorPane) loader.load();
-	// rootLayout.setCenter(SystemManagerInfoModifyScene);
-	//
-	// // get Controller
-	// SystemManagerInfoModifyController SystemManagerInfoModifyController =
-	// loader.getController();
-	// SystemManagerInfoModifyController.initialize(this, systemManager);
-	// } catch (IOException e) {
-	// // TODO Auto-generated catch block
-	// e.printStackTrace();
-	// }
-	// }
-	//
-	// /**
-	// * show 显示网站营销人员修改密码界面
-	// *
-	// * @param systemManager
-	// * 接受从其他界面传来的SystemManagerVO 对象作为参数
-	// */
-	// public void showSystemManagerPasswordModifyScene(SystemManagerVO
-	// systemManager) {
-	// try {
-	// FXMLLoader loader = new FXMLLoader();
-	// loader.setLocation(
-	// Main.class.getResource("/presentation/view/userInfo_ui/SystemManagerPasswordModifyScene.fxml"));
-	// AnchorPane SystemManagerPasswordModifyScene = (AnchorPane) loader.load();
-	// rootLayout.setCenter(SystemManagerPasswordModifyScene);
-	//
-	// // get Controller
-	// SystemManagerPasswordModifyController
-	// SystemManagerPasswordModifyController = loader.getController();
-	// SystemManagerPasswordModifyController.initialize(this, systemManager);
-	// } catch (IOException e) {
-	// // TODO Auto-generated catch block
-	// e.printStackTrace();
-	// }
-	// }
 
 	/**
 	 * show 显示客户用户主界面，接受来自其他界面的customerVO对象
@@ -448,6 +311,7 @@ public class Main extends Application {
 	 */
 	public void showCustomerBookHotelScene(CustomerVO customer, HotelInfoVO hotel) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("/presentation/view/hotel_ui/BookHotelScene.fxml"));
 			AnchorPane BookHotelScene = (AnchorPane) loader.load();
@@ -470,6 +334,7 @@ public class Main extends Application {
 	 */
 	public void showCustomerHotelInfoScene(CustomerVO customer, HotelInfoVO hotel) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("/presentation/view/hotel_ui/HotelInfoScene.fxml"));
 			AnchorPane HotelInfoScene = (AnchorPane) loader.load();
@@ -492,6 +357,7 @@ public class Main extends Application {
 	 */
 	public void showCustomerHotelViewScene(CustomerVO customer) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("/presentation/view/hotel_ui/HotelViewScene.fxml"));
 			AnchorPane HotelViewScene = (AnchorPane) loader.load();
@@ -513,6 +379,7 @@ public class Main extends Application {
 	 */
 	public void showCustomerOrderViewScene(CustomerVO customer) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("/presentation/view/order_ui/CustomerOrderViewScene.fxml"));
 			AnchorPane CustomerOrderViewScene = (AnchorPane) loader.load();
@@ -536,6 +403,7 @@ public class Main extends Application {
 	public void showCustomerOrderInfoViewScene(CustomerVO customer, OrderVO orderVO) {
 		// TODO Auto-generated method stub
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("/presentation/view/order_ui/CustomerOrderInfoViewScene.fxml"));
 			AnchorPane CustomerOrderInfoViewScene = (AnchorPane) loader.load();
@@ -560,6 +428,7 @@ public class Main extends Application {
 	public void showHotelAssessmentScene(CustomerVO customer, HotelInfoVO hotel, OrderVO order) {
 		// TODO Auto-generated method stub
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("/presentation/view/order_ui/CustomerHotelAssessmentScene.fxml"));
 			AnchorPane CustomerHotelAssessmentScene = (AnchorPane) loader.load();
@@ -581,6 +450,7 @@ public class Main extends Application {
 	 */
 	public void showHotelStaffMainScene(HotelStaffVO hotelStaff) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("/main/HotelStaffMainScene.fxml"));
 			AnchorPane HotelStaffMainScene = (AnchorPane) loader.load();
@@ -602,6 +472,7 @@ public class Main extends Application {
 	 */
 	public void showHotelStaffOrderViewScene(HotelStaffVO hotelStaff) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("/presentation/view/order_ui/HotelStaffOrderViewScene.fxml"));
 			AnchorPane HotelStaffOrderViewScene = (AnchorPane) loader.load();
@@ -624,6 +495,7 @@ public class Main extends Application {
 	 */
 	public void showHotelStaffManagementOrderScene(HotelStaffVO hotelStaff, OrderVO order) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(
 					Main.class.getResource("/presentation/view/order_ui/HotelStaffManagementOrderScene.fxml"));
@@ -644,8 +516,9 @@ public class Main extends Application {
 	 * 
 	 * @param hotel
 	 */
-	public void showHotelStaffHotelInfoViewScene(HotelInfoVO hotel) {
+	public void showHotelStaffHotelInfoViewScene(HotelStaffVO hotelStaff,HotelInfoVO hotel) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("/presentation/view/hotel_ui/HotelStaffHotelInfoViewScene.fxml"));
 			AnchorPane HotelStaffHotelInfoViewScene = (AnchorPane) loader.load();
@@ -653,7 +526,7 @@ public class Main extends Application {
 
 			// get Controller
 			HotelStaffHotelInfoViewController HotelStaffHotelInfoViewController = loader.getController();
-			HotelStaffHotelInfoViewController.initialize(this, hotel);
+			HotelStaffHotelInfoViewController.initialize(this, hotelStaff,hotel);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -667,6 +540,7 @@ public class Main extends Application {
 	 */
 	public void showHotelStaffHotelInfoModifyScene(HotelInfoVO hotel) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(
 					Main.class.getResource("/presentation/view/hotel_ui/HotelStaffHotelInfoModifyScene.fxml"));
@@ -689,6 +563,7 @@ public class Main extends Application {
 	 */
 	public void showHotelStrategyViewScene(HotelInfoVO hotel) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(
 					Main.class.getResource("/presentation/view/hotelStrategy_ui/HotelStrategyViewScene.fxml"));
@@ -711,6 +586,7 @@ public class Main extends Application {
 	 */
 	public void showHotelStrategyModifyScene(HotelInfoVO hotel) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(
 					Main.class.getResource("/presentation/view/hotelStrategy_ui/HotelStrategyModifyScene.fxml"));
@@ -735,6 +611,7 @@ public class Main extends Application {
 	 */
 	public void showSystemStaffMainScene(SystemStaffVO systemStaffVO) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("/main/SystemStaffMainScene.fxml"));
 			AnchorPane SystemStaffMainScene = (AnchorPane) loader.load();
@@ -756,6 +633,7 @@ public class Main extends Application {
 	 */
 	public void showSystemStaffOrderManagementScene(SystemStaffVO systemStaffVO) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(
 					Main.class.getResource("/presentation/view/order_ui/SystemStaffOrderManagementScene.fxml"));
@@ -777,6 +655,7 @@ public class Main extends Application {
 	 */
 	public void showSystemStaffOrderViewScene(SystemStaffVO systemStaffVO, OrderVO orderVO) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("/presentation/view/order_ui/SystemStaffOrderViewScene.fxml"));
 			AnchorPane SystemStaffOrderViewScene = (AnchorPane) loader.load();
@@ -798,6 +677,7 @@ public class Main extends Application {
 	 */
 	public void showSystemStaffCreditManagementScene(SystemStaffVO systemStaffVO) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class
 					.getResource("/presentation/view/userManagement_ui/SystemStaffCreditManagementScene.fxml"));
@@ -820,6 +700,7 @@ public class Main extends Application {
 	 */
 	public void showSystemStrategyViewScene(SystemStaffVO systemStaffVO) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(
 					Main.class.getResource("/presentation/view/systemStrategy_ui/SystemStrategyViewScene.fxml"));
@@ -842,6 +723,7 @@ public class Main extends Application {
 	 */
 	public void showSystemHolidayStrategyModifyScene(SystemStaffVO systemStaffVO) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class
 					.getResource("/presentation/view/systemStrategy_ui/SystemHolidayStrategyModifyScene.fxml"));
@@ -864,6 +746,7 @@ public class Main extends Application {
 	 */
 	public void showSystemStaffInfoScene(SystemStaffVO systemStaff) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("/presentation/view/userInfo_ui/SystemStaffInfoScene.fxml"));
 			AnchorPane SystemStaffInfoModifyScene = (AnchorPane) loader.load();
@@ -886,6 +769,7 @@ public class Main extends Application {
 	 */
 	public void showSystemStaffInfoModifyScene(SystemStaffVO systemStaff) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(
 					Main.class.getResource("/presentation/view/userInfo_ui/SystemStaffInfoModifyScene.fxml"));
@@ -908,6 +792,7 @@ public class Main extends Application {
 	 */
 	public void showSystemStaffPasswordModifyScene(SystemStaffVO systemStaff) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(
 					Main.class.getResource("/presentation/view/userInfo_ui/SystemStaffPasswordModifyScene.fxml"));
@@ -931,6 +816,7 @@ public class Main extends Application {
 	 */
 	public void showSystemManagerInfoScene(SystemManagerVO systemManager) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("/presentation/view/userInfo_ui/SystemManagerInfoScene.fxml"));
 			AnchorPane SystemManagerInfoScene = (AnchorPane) loader.load();
@@ -953,6 +839,7 @@ public class Main extends Application {
 	 */
 	public void showSystemManagerInfoModifyScene(SystemManagerVO systemManager) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(
 					Main.class.getResource("/presentation/view/userInfo_ui/SystemManagerInfoModifyScene.fxml"));
@@ -976,6 +863,7 @@ public class Main extends Application {
 	 */
 	public void showSystemManagerPasswordModifyScene(SystemManagerVO systemManager) {
 		try {
+			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(
 					Main.class.getResource("/presentation/view/userInfo_ui/SystemManagerPasswordModifyScene.fxml"));
@@ -1034,5 +922,7 @@ public class Main extends Application {
 		}
 	}
 
-
+	public static void main(String[] args) {
+		launch(args);
+	}
 }

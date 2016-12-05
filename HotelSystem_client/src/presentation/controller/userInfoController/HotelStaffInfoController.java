@@ -59,4 +59,7 @@ public class HotelStaffInfoController {
 	public void handlePasswordModify() {
 		this.mainScene.showHotelStaffPasswordModifyScene(hotelStaff);
 	}
+	public void handleBack(){
+		this.mainScene.showHotelStaffMainScene(hotelStaff);
+	}
 }

@@ -30,8 +30,8 @@ public class ClientRunner {
 			e.printStackTrace();
 		} 
 	}
-	public static void main(String[] args){
-		ClientRunner cr = new ClientRunner();
-		cr.main.launch(args);
-	}
+//	public static void main(String[] args){
+//		ClientRunner cr = new ClientRunner();
+//		cr.main.launch(args);
+//	}
 }
