@@ -2,13 +2,13 @@ package VO;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 import PO.OrderPO;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import other.OrderState;
 import other.RoomType;
+import util.DateUtil;
 
 public class OrderVO {
 
@@ -68,6 +68,7 @@ public class OrderVO {
 	private String orderID;
 	private String userID;
 	private String userName;
+
 	public String getUserName() {
 		return userName;
 	}
@@ -103,7 +104,7 @@ public class OrderVO {
 		this.orderState = orderState;
 	}
 
-	public OrderVO(String orderID, String userID, String hotelID, double price, LocalsDate entryTime, int lastime,
+	public OrderVO(String orderID, String userID, String hotelID, double price, LocalDate entryTime, int lastime,
 			OrderState orderState) {
 		this.orderID = orderID;
 		this.userID = userID;
@@ -177,6 +178,11 @@ public class OrderVO {
 	// }
 	//
 	// 表格服务方法
+	public StringProperty getCustomerIDProperty() {
+		return new SimpleStringProperty(this.userID);
+	}
+	
+	
 	public StringProperty getOrderIDProperty() {
 		return new SimpleStringProperty(this.orderID);
 	}
@@ -202,4 +208,20 @@ public class OrderVO {
 		return new SimpleStringProperty(this.entryTime.toString());
 	}
 
+	public StringProperty getCustomerIdProperty() {
+		return new SimpleStringProperty(this.userID);
+	}
+
+	public StringProperty getHotelIDProperty() {
+		return new SimpleStringProperty(this.hotelID);
+	}
+
+	public StringProperty getLastTimeProperty() {
+		return new SimpleStringProperty(String.valueOf(lastime));
+	}
+
+	public StringProperty getRoomInfoProperty() {
+		// TODO Auto-generated method stub
+		return new SimpleStringProperty() ;
+	}
 }

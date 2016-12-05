@@ -69,10 +69,10 @@ public class HotelStaffMainController {
 			this.orderData.add(this.orderList.get(count));
 			count++;
 		}
-		this.customerId.setCellValueFactory(cellData -> cellData.getValue().getUserIDProperty());
+		this.customerId.setCellValueFactory(cellData -> cellData.getValue().getCustomerIDProperty());
 		this.roomInfo.setCellValueFactory(cellData -> cellData.getValue().getRoomInfoProperty());
 		this.arriveTime.setCellValueFactory(cellData -> cellData.getValue().getEntryTimeProperty());
-		this.orderDuration.setCellValueFactory(cellData -> cellData.getValue().getOrderLasttimeProperty());
+		this.orderDuration.setCellValueFactory(cellData -> cellData.getValue().getLastTimeProperty());
 
 		this.HotelStaffMainShow();
 	}

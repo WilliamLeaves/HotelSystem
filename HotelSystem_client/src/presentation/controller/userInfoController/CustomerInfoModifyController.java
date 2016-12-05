@@ -12,7 +12,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import main.Main;
-import other.ResultMessage;
+
 import other.memberState;
 import util.DateUtil;
 

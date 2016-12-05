@@ -35,38 +35,39 @@ public class SystemStrategyViewController {
 	@FXML
 	private Label discountListLabel;
 	@FXML
-    private TableView<SystemStrategyVO> systemStrategyTable;
-    @FXML
-    private TableColumn<SystemStrategyVO, String> nameOfStrategy;
-    @FXML
-    private TableColumn<SystemStrategyVO, String> descriptionOfStrategy;
-    @FXML
-    private TableColumn<SystemStrategyVO, String> stateOfStrategy;
-    @FXML
+	private TableView<SystemStrategyVO> systemStrategyTable;
+	@FXML
+	private TableColumn<SystemStrategyVO, String> nameOfStrategy;
+	@FXML
+	private TableColumn<SystemStrategyVO, String> descriptionOfStrategy;
+	@FXML
+	private TableColumn<SystemStrategyVO, String> stateOfStrategy;
+	@FXML
 	private Button addStrategy;
 	@FXML
 	private Button modifyStrategy;
-    
-    private Main mainScene;
-    private SystemStaffVO systemStaffVO;
-    private SystemStrategyVO systemStrategyVO;
-    private SystemStrategy_blservice systemStrategy_blservice;
-    private ObservableList<SystemStrategyVO> systemStrategyData = FXCollections.observableArrayList();
-    
-    public SystemStrategyViewController(){		
-    	systemStrategy_blservice = new SystemStrategy_bl();
+
+	private Main mainScene;
+	private SystemStaffVO systemStaffVO;
+	private SystemStrategyVO systemStrategyVO;
+	private SystemStrategy_blservice systemStrategy_blservice;
+	private ObservableList<SystemStrategyVO> systemStrategyData = FXCollections.observableArrayList();
+
+	public SystemStrategyViewController() {
+		systemStrategy_blservice = new SystemStrategy_bl();
 	}
-	
-    public void initialize(Main mainScene,SystemStaffVO systemStaffVO) {
+
+	public void initialize(Main mainScene, SystemStaffVO systemStaffVO) {
 		this.mainScene = mainScene;
 		this.systemStaffVO = systemStaffVO;
 		SystemStrategyViewShow(mainScene);
 	}
+
 	public void SystemStrategyViewShow(Main mainScene) {
-		//×ó±ßÀ¸
+		// ×ó±ßÀ¸
 		leftIdLabel.setText(systemStaffVO.getId());
 		leftNameLabel.setText(systemStaffVO.getUsername());
-		//ÓÒ±ßÀ¸
-		systemStrategy_blservice.getAllSystemStrategys(systemStaffID);
+		// ÓÒ±ßÀ¸
+		systemStrategy_blservice.getAllSystemStrategys(this.systemStaffVO.getId());
 	}
 }

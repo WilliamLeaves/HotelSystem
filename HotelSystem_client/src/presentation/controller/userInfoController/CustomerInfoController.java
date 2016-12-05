@@ -63,7 +63,7 @@ public class CustomerInfoController {
 	public void CustomerinfoShow(Main mainScene) {
 		this.idLabel.setText(Customer.getId());
 		this.nameLabel.setText(Customer.getUsername());
-		this.birthdayLabel.setText(DateUtil.format(Customer.getBirthday()));
+		//this.birthdayLabel.setText(DateUtil.format(Customer.getBirthday()));
 		this.companyLabel.setText(Customer.getCompanyName());
 		this.creditLabel.setText(String.valueOf(Customer.getCredit()));
 

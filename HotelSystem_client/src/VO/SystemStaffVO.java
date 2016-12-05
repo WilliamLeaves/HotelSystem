@@ -13,17 +13,17 @@ public class SystemStaffVO {
 	private String phone;
 
 	public SystemStaffVO() {
-//		this.id = "300001";
-//		this.username = "Bill";
-//		this.businessDistrict = "新街口商圈";
-//		this.password = "bill300001";
+		// this.id = "300001";
+		// this.username = "Bill";
+		// this.businessDistrict = "新街口商圈";
+		// this.password = "bill300001";
 	}
 
 	public SystemStaffVO(SystemStaffPO userPO) {
-//		super();
-//		this.id = userPO.getId();
-//		this.username = userPO.getUsername();
-//		this.businessDistrict = userPO.getBusinessDistrict();
+		// super();
+		// this.id = userPO.getId();
+		// this.username = userPO.getUsername();
+		// this.businessDistrict = userPO.getBusinessDistrict();
 	}
 
 	public String getId() {
@@ -49,12 +49,23 @@ public class SystemStaffVO {
 	public void setBusinessDistrict(String businessDistrict) {
 		this.businessDistrict = businessDistrict;
 	}
-	
-	public String getPhone(){
+
+	public String getPhone() {
 		return phone;
 	}
-	public void setPhone(String phone){
+
+	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+
+	public String getPassword() {
+		// TODO Auto-generated method stub
+		return this.password;
+	}
+
+	public void setPassword(String newPasswordInField) {
+		// TODO Auto-generated method stub
+		this.password = newPasswordInField;
 	}
 
 }

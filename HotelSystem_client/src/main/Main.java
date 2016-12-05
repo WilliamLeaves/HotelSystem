@@ -277,135 +277,144 @@ public class Main extends Application {
 	 * @param systemStaff
 	 *            接受从其他界面传来的SystemStaffVO 对象作为参数
 	 */
-//	public void showSystemStaffInfoScene(SystemStaffVO systemStaff) {
-//		try {
-//			FXMLLoader loader = new FXMLLoader();
-//			loader.setLocation(Main.class.getResource("/presentation/view/userInfo_ui/SystemStaffInfoScene.fxml"));
-//			AnchorPane SystemStaffInfoModifyScene = (AnchorPane) loader.load();
-//			rootLayout.setCenter(SystemStaffInfoModifyScene);
-//
-//			// get Controller
-//			SystemStaffInfoController SystemStaffInfoController = loader.getController();
-//			SystemStaffInfoController.initialize(this, systemStaff);
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//	}
-//
-//	/**
-//	 * show 显示网站营销人员修改个人信息界面
-//	 * 
-//	 * @param systemStaff
-//	 *            接受从其他界面传来的SystemStaffVO 对象作为参数
-//	 */
-//	public void showSystemStaffInfoModifyScene(SystemStaffVO systemStaff) {
-//		try {
-//			FXMLLoader loader = new FXMLLoader();
-//			loader.setLocation(
-//					Main.class.getResource("/presentation/view/userInfo_ui/SystemStaffInfoModifyScene.fxml"));
-//			AnchorPane SystemStaffInfoModifyScene = (AnchorPane) loader.load();
-//			rootLayout.setCenter(SystemStaffInfoModifyScene);
-//
-//			// get Controller
-//			SystemStaffInfoModifyController SystemStaffInfoModifyController = loader.getController();
-//			SystemStaffInfoModifyController.initialize(this, systemStaff);
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//	}
-//
-//	/**
-//	 * show 显示网站营销人员修改密码界面
-//	 * 
-//	 * @param systemStaff
-//	 *            接受从其他界面传来的SystemStaffVO 对象作为参数
-//	 */
-//	public void showSystemStaffPasswordModifyScene(SystemStaffVO systemStaff) {
-//		try {
-//			FXMLLoader loader = new FXMLLoader();
-//			loader.setLocation(
-//					Main.class.getResource("/presentation/view/userInfo_ui/SystemStaffPasswordModifyScene.fxml"));
-//			AnchorPane SystemStaffPasswordModifyScene = (AnchorPane) loader.load();
-//			rootLayout.setCenter(SystemStaffPasswordModifyScene);
-//
-//			// get Controller
-//			SystemStaffPasswordModifyController SystemStaffPasswordModifyController = loader.getController();
-//			SystemStaffPasswordModifyController.initialize(this, systemStaff);
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//	}
-//
-//	/**
-//	 * show 显示网站营销人员维护个人信息界面
-//	 * 
-//	 * @param systemManager
-//	 *            接受从其他界面传来的SystemManagerVO 对象作为参数
-//	 */
-//	public void showSystemManagerInfoScene(SystemManagerVO systemManager) {
-//		try {
-//			FXMLLoader loader = new FXMLLoader();
-//			loader.setLocation(Main.class.getResource("/presentation/view/userInfo_ui/SystemManagerInfoScene.fxml"));
-//			AnchorPane SystemManagerInfoScene = (AnchorPane) loader.load();
-//			rootLayout.setCenter(SystemManagerInfoScene);
-//
-//			// get Controller
-//			SystemManagerInfoController SystemManagerInfoController = loader.getController();
-//			SystemManagerInfoController.initialize(this, systemManager);
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//	}
-//
-//	/**
-//	 * show 显示网站营销人员修改个人信息界面
-//	 * 
-//	 * @param systemManager
-//	 *            接受从其他界面传来的SystemManagerVO 对象作为参数
-//	 */
-//	public void showSystemManagerInfoModifyScene(SystemManagerVO systemManager) {
-//		try {
-//			FXMLLoader loader = new FXMLLoader();
-//			loader.setLocation(
-//					Main.class.getResource("/presentation/view/userInfo_ui/SystemManagerInfoModifyScene.fxml"));
-//			AnchorPane SystemManagerInfoModifyScene = (AnchorPane) loader.load();
-//			rootLayout.setCenter(SystemManagerInfoModifyScene);
-//
-//			// get Controller
-//			SystemManagerInfoModifyController SystemManagerInfoModifyController = loader.getController();
-//			SystemManagerInfoModifyController.initialize(this, systemManager);
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//	}
-//
-//	/**
-//	 * show 显示网站营销人员修改密码界面
-//	 * 
-//	 * @param systemManager
-//	 *            接受从其他界面传来的SystemManagerVO 对象作为参数
-//	 */
-//	public void showSystemManagerPasswordModifyScene(SystemManagerVO systemManager) {
-//		try {
-//			FXMLLoader loader = new FXMLLoader();
-//			loader.setLocation(
-//					Main.class.getResource("/presentation/view/userInfo_ui/SystemManagerPasswordModifyScene.fxml"));
-//			AnchorPane SystemManagerPasswordModifyScene = (AnchorPane) loader.load();
-//			rootLayout.setCenter(SystemManagerPasswordModifyScene);
-//
-//			// get Controller
-//			SystemManagerPasswordModifyController SystemManagerPasswordModifyController = loader.getController();
-//			SystemManagerPasswordModifyController.initialize(this, systemManager);
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//	}
+	// public void showSystemStaffInfoScene(SystemStaffVO systemStaff) {
+	// try {
+	// FXMLLoader loader = new FXMLLoader();
+	// loader.setLocation(Main.class.getResource("/presentation/view/userInfo_ui/SystemStaffInfoScene.fxml"));
+	// AnchorPane SystemStaffInfoModifyScene = (AnchorPane) loader.load();
+	// rootLayout.setCenter(SystemStaffInfoModifyScene);
+	//
+	// // get Controller
+	// SystemStaffInfoController SystemStaffInfoController =
+	// loader.getController();
+	// SystemStaffInfoController.initialize(this, systemStaff);
+	// } catch (IOException e) {
+	// // TODO Auto-generated catch block
+	// e.printStackTrace();
+	// }
+	// }
+	//
+	// /**
+	// * show 显示网站营销人员修改个人信息界面
+	// *
+	// * @param systemStaff
+	// * 接受从其他界面传来的SystemStaffVO 对象作为参数
+	// */
+	// public void showSystemStaffInfoModifyScene(SystemStaffVO systemStaff) {
+	// try {
+	// FXMLLoader loader = new FXMLLoader();
+	// loader.setLocation(
+	// Main.class.getResource("/presentation/view/userInfo_ui/SystemStaffInfoModifyScene.fxml"));
+	// AnchorPane SystemStaffInfoModifyScene = (AnchorPane) loader.load();
+	// rootLayout.setCenter(SystemStaffInfoModifyScene);
+	//
+	// // get Controller
+	// SystemStaffInfoModifyController SystemStaffInfoModifyController =
+	// loader.getController();
+	// SystemStaffInfoModifyController.initialize(this, systemStaff);
+	// } catch (IOException e) {
+	// // TODO Auto-generated catch block
+	// e.printStackTrace();
+	// }
+	// }
+	//
+	// /**
+	// * show 显示网站营销人员修改密码界面
+	// *
+	// * @param systemStaff
+	// * 接受从其他界面传来的SystemStaffVO 对象作为参数
+	// */
+	// public void showSystemStaffPasswordModifyScene(SystemStaffVO systemStaff)
+	// {
+	// try {
+	// FXMLLoader loader = new FXMLLoader();
+	// loader.setLocation(
+	// Main.class.getResource("/presentation/view/userInfo_ui/SystemStaffPasswordModifyScene.fxml"));
+	// AnchorPane SystemStaffPasswordModifyScene = (AnchorPane) loader.load();
+	// rootLayout.setCenter(SystemStaffPasswordModifyScene);
+	//
+	// // get Controller
+	// SystemStaffPasswordModifyController SystemStaffPasswordModifyController =
+	// loader.getController();
+	// SystemStaffPasswordModifyController.initialize(this, systemStaff);
+	// } catch (IOException e) {
+	// // TODO Auto-generated catch block
+	// e.printStackTrace();
+	// }
+	// }
+	//
+	// /**
+	// * show 显示网站营销人员维护个人信息界面
+	// *
+	// * @param systemManager
+	// * 接受从其他界面传来的SystemManagerVO 对象作为参数
+	// */
+	// public void showSystemManagerInfoScene(SystemManagerVO systemManager) {
+	// try {
+	// FXMLLoader loader = new FXMLLoader();
+	// loader.setLocation(Main.class.getResource("/presentation/view/userInfo_ui/SystemManagerInfoScene.fxml"));
+	// AnchorPane SystemManagerInfoScene = (AnchorPane) loader.load();
+	// rootLayout.setCenter(SystemManagerInfoScene);
+	//
+	// // get Controller
+	// SystemManagerInfoController SystemManagerInfoController =
+	// loader.getController();
+	// SystemManagerInfoController.initialize(this, systemManager);
+	// } catch (IOException e) {
+	// // TODO Auto-generated catch block
+	// e.printStackTrace();
+	// }
+	// }
+	//
+	// /**
+	// * show 显示网站营销人员修改个人信息界面
+	// *
+	// * @param systemManager
+	// * 接受从其他界面传来的SystemManagerVO 对象作为参数
+	// */
+	// public void showSystemManagerInfoModifyScene(SystemManagerVO
+	// systemManager) {
+	// try {
+	// FXMLLoader loader = new FXMLLoader();
+	// loader.setLocation(
+	// Main.class.getResource("/presentation/view/userInfo_ui/SystemManagerInfoModifyScene.fxml"));
+	// AnchorPane SystemManagerInfoModifyScene = (AnchorPane) loader.load();
+	// rootLayout.setCenter(SystemManagerInfoModifyScene);
+	//
+	// // get Controller
+	// SystemManagerInfoModifyController SystemManagerInfoModifyController =
+	// loader.getController();
+	// SystemManagerInfoModifyController.initialize(this, systemManager);
+	// } catch (IOException e) {
+	// // TODO Auto-generated catch block
+	// e.printStackTrace();
+	// }
+	// }
+	//
+	// /**
+	// * show 显示网站营销人员修改密码界面
+	// *
+	// * @param systemManager
+	// * 接受从其他界面传来的SystemManagerVO 对象作为参数
+	// */
+	// public void showSystemManagerPasswordModifyScene(SystemManagerVO
+	// systemManager) {
+	// try {
+	// FXMLLoader loader = new FXMLLoader();
+	// loader.setLocation(
+	// Main.class.getResource("/presentation/view/userInfo_ui/SystemManagerPasswordModifyScene.fxml"));
+	// AnchorPane SystemManagerPasswordModifyScene = (AnchorPane) loader.load();
+	// rootLayout.setCenter(SystemManagerPasswordModifyScene);
+	//
+	// // get Controller
+	// SystemManagerPasswordModifyController
+	// SystemManagerPasswordModifyController = loader.getController();
+	// SystemManagerPasswordModifyController.initialize(this, systemManager);
+	// } catch (IOException e) {
+	// // TODO Auto-generated catch block
+	// e.printStackTrace();
+	// }
+	// }
 
 	/**
 	 * show 显示客户用户主界面，接受来自其他界面的customerVO对象
@@ -716,6 +725,7 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
+
 	/**
 	 * show 网站营销人员mainScene
 	 * 
@@ -747,7 +757,8 @@ public class Main extends Application {
 	public void showSystemStaffOrderManagementScene(SystemStaffVO systemStaffVO) {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource("/presentation/view/order_ui/SystemStaffOrderManagementScene.fxml"));
+			loader.setLocation(
+					Main.class.getResource("/presentation/view/order_ui/SystemStaffOrderManagementScene.fxml"));
 			AnchorPane SystemStaffOrderManagementScene = (AnchorPane) loader.load();
 			rootLayout.setCenter(SystemStaffOrderManagementScene);
 
@@ -758,12 +769,13 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
+
 	/**
 	 * show 网站营销人员查看异常订单详情
 	 * 
 	 * @param systemStaffVO
 	 */
-	public void showSystemStaffOrderViewScene(SystemStaffVO systemStaffVO,OrderVO orderVO) {
+	public void showSystemStaffOrderViewScene(SystemStaffVO systemStaffVO, OrderVO orderVO) {
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("/presentation/view/order_ui/SystemStaffOrderViewScene.fxml"));
@@ -777,6 +789,7 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
+
 	/**
 	 * show 网站营销人员 管理信用值界面
 	 * 
@@ -786,8 +799,8 @@ public class Main extends Application {
 	public void showSystemStaffCreditManagementScene(SystemStaffVO systemStaffVO) {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(
-					Main.class.getResource("/presentation/view/userManagement_ui/SystemStaffCreditManagementScene.fxml"));
+			loader.setLocation(Main.class
+					.getResource("/presentation/view/userManagement_ui/SystemStaffCreditManagementScene.fxml"));
 			AnchorPane SystemStaffCreditManagementScene = (AnchorPane) loader.load();
 			rootLayout.setCenter(SystemStaffCreditManagementScene);
 
@@ -815,7 +828,7 @@ public class Main extends Application {
 
 			// get Controller
 			SystemStrategyViewController systemStrategyViewController = loader.getController();
-			systemStrategyViewController.initialize(this,systemStaffVO);
+			systemStrategyViewController.initialize(this, systemStaffVO);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -830,8 +843,8 @@ public class Main extends Application {
 	public void showSystemHolidayStrategyModifyScene(SystemStaffVO systemStaffVO) {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(
-					Main.class.getResource("/presentation/view/systemStrategy_ui/SystemHolidayStrategyModifyScene.fxml"));
+			loader.setLocation(Main.class
+					.getResource("/presentation/view/systemStrategy_ui/SystemHolidayStrategyModifyScene.fxml"));
 			AnchorPane SystemHolidayStrategyModifyScene = (AnchorPane) loader.load();
 			rootLayout.setCenter(SystemHolidayStrategyModifyScene);
 
@@ -842,6 +855,7 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
+
 	/**
 	 * show 显示网站营销人员维护个人信息界面
 	 * 
@@ -976,8 +990,7 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
-	
-	
+
 	private void initRootLayout() {
 		// TODO Auto-generated method stub
 		try {
@@ -1021,8 +1034,5 @@ public class Main extends Application {
 		}
 	}
 
-	public static void main(String[] args) {
-		launch(args);
-	}
 
 }
