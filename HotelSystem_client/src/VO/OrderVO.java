@@ -1,5 +1,7 @@
 package VO;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import PO.OrderPO;
@@ -26,7 +28,7 @@ public class OrderVO {
 		return price;
 	}
 
-	public Date getEntryTime() {
+	public LocalDate getEntryTime() {
 		return entryTime;
 	}
 
@@ -65,15 +67,33 @@ public class OrderVO {
 
 	private String orderID;
 	private String userID;
+	private String userName;
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
 	private String hotelID;
 	private double price;
 	private double originalPrice;
-	private java.util.Date entryTime;
+	private LocalDate entryTime;
 	private int lastime;
 	private OrderState orderState;
 
 	private RoomType roomType;
 	private int roomNum;
+	private LocalDateTime revocationTime;
+
+	public LocalDateTime getRevocationTime() {
+		return revocationTime;
+	}
+
+	public void setRevocationTime(LocalDateTime revocationTime) {
+		this.revocationTime = revocationTime;
+	}
 
 	public OrderVO(String orderID, String userID, String hotelID, double price, OrderState orderState) {
 		this.orderID = orderID;
@@ -83,7 +103,7 @@ public class OrderVO {
 		this.orderState = orderState;
 	}
 
-	public OrderVO(String orderID, String userID, String hotelID, double price, Date entryTime, int lastime,
+	public OrderVO(String orderID, String userID, String hotelID, double price, LocalsDate entryTime, int lastime,
 			OrderState orderState) {
 		this.orderID = orderID;
 		this.userID = userID;
@@ -101,7 +121,7 @@ public class OrderVO {
 		hotelID = orderPO.getHotelId();
 		price = orderPO.getPrice();
 		entryTime = orderPO.getEntryTime();
-		//lastime = orderPO.getLastTime();
+		// lastime = orderPO.getLastTime();
 		orderState = orderPO.getStatus();
 	}
 

@@ -20,24 +20,12 @@ public class SystemManagerVO {
 		this.systemmanager_Id = "400001";
 		this.password = "Tim400001";
 	}
-
-	public SystemManagerVO(SystemManagerPO systemManagerPO) {
-		this.systemmanager_Id = systemManagerPO.getId();
-		this.systemmanager_Name = systemManagerPO.getManagerName();
-	}
-
+    public SystemManagerVO(SystemManagerPO systemManagerPO){
+    	this.systemmanager_Id = systemManagerPO.getId();
+    	this.systemmanager_Name = systemManagerPO.getManagerName();
+    }
 	public void setUsername(String name) {
 		// TODO Auto-generated method stub
 		this.systemmanager_Name = name;
-	}
-
-	public void setPassword(String newPasswordInField) {
-		// TODO Auto-generated method stub
-		this.password = newPasswordInField;
-	}
-
-	public String getPassword() {
-		// TODO Auto-generated method stub
-		return this.password;
 	}
 }
