@@ -1,5 +1,7 @@
 package data.dao.impl;
 
+import java.util.ArrayList;
+
 import PO.CustomerPO;
 import data.dao.CustomerDao;
 import other.hibernateUtil;
@@ -41,5 +43,15 @@ public class CustomerDaoImpl implements CustomerDao{
 			e.printStackTrace();
 			return null;
 		}	}
+
+	public ArrayList<CustomerPO> getAllCustomers() {
+	    ArrayList<CustomerPO> list = null;
+	    try {
+			list = (ArrayList<CustomerPO>)hibernateUtil.getAll("customer", CustomerPO.class);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
 	
 }

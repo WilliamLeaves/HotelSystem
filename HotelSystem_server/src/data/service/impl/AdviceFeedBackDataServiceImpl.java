@@ -36,5 +36,9 @@ public class AdviceFeedBackDataServiceImpl implements AdviceFeedBackDataService 
 		return adviceFeedbackDao.getAdvices(userId, type);
 	}
 
+	public ArrayList<AdviceFeedBackPO> getAllAdvices() throws RemoteException {
+		return adviceFeedbackDao.getAllAdvices();
+	}
+
 
 }

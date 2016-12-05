@@ -1,6 +1,7 @@
 package data.service.impl;
 
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 
 import PO.HotelStaffPO;
 import data.dao.DataFactory;
@@ -31,6 +32,9 @@ public class HotelStaffDataServiceImpl implements HotelStaffDataService{
 
 	public HotelStaffPO findHotelStaff(String staffID) throws RemoteException {
 		return hotelStaffDao.findStaff(staffID);
+	}
+	public ArrayList<HotelStaffPO> getAllHotelStaffs() throws RemoteException {
+		return hotelStaffDao.getAllHotelStaffs();
 	}
 
 	

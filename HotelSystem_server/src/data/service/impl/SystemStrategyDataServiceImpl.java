@@ -1,6 +1,7 @@
 package data.service.impl;
 
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 
 import PO.SystemStrategyPO;
 import data.dao.DataFactory;
@@ -30,6 +31,9 @@ public class SystemStrategyDataServiceImpl implements SystemStrategyDataService 
 	}
 	public SystemStrategyPO getSstrategy(String strategyName) throws RemoteException {
 		return service.getSstrategy(strategyName);
+	}
+	public ArrayList<SystemStrategyPO> getAllStrategys() throws RemoteException {
+		return service.getAllStrategys();
 	}
 
 }

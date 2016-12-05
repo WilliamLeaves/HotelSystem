@@ -63,6 +63,16 @@ public class HotelDaoImpl implements HotelDao{
 			return false;
 		}
 	}
+
+	public ArrayList<HotelPO> getAllHotels() {
+		ArrayList<HotelPO> list = null;
+		try {
+			list = (ArrayList<HotelPO>)hibernateUtil.getAll("hotel",HotelPO.class);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
 	
 
 }

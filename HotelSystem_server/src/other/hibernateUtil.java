@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.Query;
-
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -12,6 +11,7 @@ import org.hibernate.Transaction;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.query.NativeQuery;
 
 public class hibernateUtil {
     private static SessionFactory sf;
@@ -109,6 +109,19 @@ public class hibernateUtil {
 				session.close();
 		}
 		return list;
+	}
+	public static List getAll(String tableName,Class clazz){
+		Session session = null;
+		List list = null;
+		try {
+			session = hibernateUtil.getSession();
+			NativeQuery query = session.createNativeQuery("select * from "+tableName,clazz);
+			list  =  query.getResultList();
+			return list;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return list;
+		}
 	}
 
 }

@@ -1,5 +1,7 @@
 package data.dao.impl;
 
+import java.util.ArrayList;
+
 import PO.SystemStrategyPO;
 import data.dao.SystemStrategyDao;
 import other.hibernateUtil;
@@ -45,5 +47,15 @@ public class SystemStrategyDaoImpl implements SystemStrategyDao{
 			return null;
 		}
 }
+
+	public ArrayList<SystemStrategyPO> getAllStrategys() {
+	    ArrayList<SystemStrategyPO> list = null;
+	    try {
+			list = (ArrayList<SystemStrategyPO>)hibernateUtil.getAll("systemstrategy",SystemStrategyPO.class);
+		} catch (Exception e) {
+		   e.printStackTrace();
+		}
+		return list;
+	}
 
 }

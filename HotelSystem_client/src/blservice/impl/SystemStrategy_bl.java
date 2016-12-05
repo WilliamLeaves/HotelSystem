@@ -9,12 +9,8 @@ import blservice.SystemStrategy_blservice;
 
 public class SystemStrategy_bl implements SystemStrategy_blservice{
 
-	public ArrayList<SystemStrategyVO> getAllSystemStrategys(String systemStaffID) {
-		/*
-		 * data≤„»±…Ÿ∑Ω∑®
-		 */
-//		ArrayList<SystemStrategyPO> systemStrategyPOs  = 
-//				RemoteHelper.getInstance().getSystemStrategyDataService();
+	public ArrayList<SystemStrategyVO> getAllSystemStrategys() {
+		
 		return null;
 	}
 

@@ -5,7 +5,6 @@ import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import RMI.RemoteHelper;
-import TestRMI.testLogin;
 
 
 
@@ -31,6 +30,6 @@ public class ClientRunner {
 	}
 	public static void main(String[] args){
 		ClientRunner cr = new ClientRunner();
-		testLogin.ad();
+//		testLogin.ad();
 	}
 }

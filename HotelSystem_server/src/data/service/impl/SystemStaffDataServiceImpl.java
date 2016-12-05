@@ -1,6 +1,7 @@
 package data.service.impl;
 
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 
 import PO.SystemManagerPO;
 import PO.SystemStaffPO;
@@ -33,6 +34,9 @@ public class SystemStaffDataServiceImpl implements SystemStaffDataService{
 
 	public SystemStaffPO findStaff(String staffID) throws RemoteException {
 		return staffDao.findStaff(staffID);
+	}
+	public ArrayList<SystemStaffPO> getAllSystemStaffs() throws RemoteException {
+		return staffDao.getAllSystemStaffs();
 	}	
 
 

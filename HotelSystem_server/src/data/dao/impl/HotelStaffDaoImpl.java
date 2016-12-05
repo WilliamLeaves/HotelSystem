@@ -1,5 +1,7 @@
 package data.dao.impl;
 
+import java.util.ArrayList;
+
 import PO.HotelStaffPO;
 import data.dao.HotelStaffDao;
 import other.hibernateUtil;
@@ -41,6 +43,16 @@ public class HotelStaffDaoImpl implements HotelStaffDao{
 			e.printStackTrace();
 			return null;
 		}	
+	}
+
+	public ArrayList<HotelStaffPO> getAllHotelStaffs() {
+		ArrayList<HotelStaffPO> list = null;
+		try{
+			list = (ArrayList<HotelStaffPO>)hibernateUtil.getAll("hotelstaff", HotelStaffPO.class);
+		}catch (Exception e) {
+		    e.printStackTrace();
+		}
+		return list;
 	}
 
 }

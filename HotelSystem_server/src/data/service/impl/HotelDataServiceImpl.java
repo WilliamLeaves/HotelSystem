@@ -37,4 +37,7 @@ public class HotelDataServiceImpl implements HotelDataService{
 	public boolean update(HotelPO hotel) {
 		return hotelDao.update(hotel);
 	}
+	public ArrayList<HotelPO> getAllHotels() throws RemoteException {
+		return hotelDao.getAllHotels();
+	}
 }

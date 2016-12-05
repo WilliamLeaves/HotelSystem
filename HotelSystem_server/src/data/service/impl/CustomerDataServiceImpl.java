@@ -1,6 +1,7 @@
 package data.service.impl;
 
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 
 import PO.CustomerPO;
 import data.dao.CustomerDao;
@@ -31,6 +32,9 @@ public class CustomerDataServiceImpl implements CustomerDataService {
 
 	public CustomerPO findCustomer(String customerID) throws RemoteException {
 		return customerDao.findCustomer(customerID);
+	}
+	public ArrayList<CustomerPO> getAllCustomers() throws RemoteException {
+		return customerDao.getAllCustomers();
 	}
 
 
