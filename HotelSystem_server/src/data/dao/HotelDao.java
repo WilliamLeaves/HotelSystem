@@ -11,5 +11,5 @@ public interface HotelDao {
 	public HotelPO get(String hotelId);
 	public boolean update(HotelPO hotel);
 	public ArrayList<HotelPO> getHotels(String strict,String type);
-	
+	public ArrayList<HotelPO> getAllHotels();
 }

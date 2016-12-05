@@ -36,6 +36,15 @@ public class AdviceFeedbackDaoImpl implements AdviceFeedbackDao {
 		}
 		return list;
 	}
+	public ArrayList<AdviceFeedBackPO> getAllAdvices() {
+		ArrayList<AdviceFeedBackPO> list =null;
+		try {
+			list = (ArrayList<AdviceFeedBackPO>)hibernateUtil.getAll("advicefeedbackpo", AdviceFeedBackPO.class);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
 	
 	
 }

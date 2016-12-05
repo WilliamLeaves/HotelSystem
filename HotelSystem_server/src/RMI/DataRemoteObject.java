@@ -67,175 +67,150 @@ public class DataRemoteObject extends UnicastRemoteObject implements LoginDataSe
 		advice = new AdviceFeedBackDataServiceImpl();
 	}
 	public boolean addAdvice(AdviceFeedBackPO advicefeedback) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return advice.addAdvice(advicefeedback);
 	}
 	public boolean updateAdvice(AdviceFeedBackPO advicefeedback) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return advice.updateAdvice(advicefeedback);
 	}
 	public ArrayList<AdviceFeedBackPO> getAdvices(String userId, String type) throws RemoteException {
-		// TODO Auto-generated method stub
-		return null;
+		return advice.getAdvices(userId, type);
 	}
-	public boolean add(HotelPO hotel) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean add(HotelPO hotel)throws RemoteException {
+		return this.hotel.add(hotel);
 	}
-	public boolean del(HotelPO hotel) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean del(HotelPO hotel) throws RemoteException{
+		return this.hotel.del(hotel);
 	}
 	
-	public boolean update(HotelPO hotel) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean update(HotelPO hotel)throws RemoteException {
+		return this.hotel.update(hotel);
 	}
-	public ArrayList<HotelPO> getHotels(String strict, String type) {
-		// TODO Auto-generated method stub
-		return null;
+	public ArrayList<HotelPO> getHotels(String strict, String type) throws RemoteException{
+		return this.hotel.getHotels(strict, type);
 	}
 	public boolean add(SystemStrategyPO systemstrategy) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return this.systemstrategy.add(systemstrategy);
 	}
 	public boolean delete(SystemStrategyPO systemstrategy) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return this.systemstrategy.delete(systemstrategy);
 	}
 	public boolean modify(SystemStrategyPO systemstrategy) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return this.systemstrategy.modify(systemstrategy);
 	}
 	public boolean add(HotelStrategyPO hotelstrategy) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return this.hotelstrategy.add(hotelstrategy);
 	}
 	public boolean delete(HotelStrategyPO hotelstrategy) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return this.hotelstrategy.delete(hotelstrategy);
 	}
 	public boolean modify(HotelStrategyPO hotelstartegy) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return this.hotelstrategy.modify(hotelstartegy);
 	}
 	public ArrayList<HotelStrategyPO> getAll(String hotelId) throws RemoteException {
-		// TODO Auto-generated method stub
-		return null;
+		return hotelstrategy.getAll(hotelId);
 	}
 	public boolean add(OrderPO order) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return orderdata.add(order);
 	}
 	public boolean update(OrderPO order) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return orderdata.update(order);
 	}
 	public boolean dalete(OrderPO order) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return orderdata.dalete(order);
 	}
 	public OrderPO findorder(String orderId) throws RemoteException {
-		// TODO Auto-generated method stub
-		return null;
+		return orderdata.findorder(orderId);
 	}
 	public List<OrderPO> findOrders(String userId, String type) throws RemoteException {
-		// TODO Auto-generated method stub
-		return null;
+		return orderdata.findOrders(userId, type);
 	}
 	public boolean confirm(String userId, String userPassword) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return this.login.confirm(userId, userPassword);
 	}
 	public boolean add(LoginPO login) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return this.login.add(login);
 	}
 	public boolean delete(LoginPO login) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return this.login.delete(login);
 	}
 	public boolean update(LoginPO login) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return this.login.update(login);
 	}
-	public HotelPO find(String hotelId) {
-		// TODO Auto-generated method stub
-		return null;
+	public HotelPO find(String hotelId) throws RemoteException{
+		return hotel.find(hotelId);
 	}
 	public HotelStrategyPO get(String hotelstrategyId) throws RemoteException {
-		// TODO Auto-generated method stub
-		return null;
+		return hotelstrategy.get(hotelstrategyId);
 	}
 	public SystemStrategyPO getSstrategy(String strategyName) throws RemoteException {
-		// TODO Auto-generated method stub
-		return null;
+		return systemstrategy.getSstrategy(strategyName);
 	}
 	public boolean addCustomer(CustomerPO customer) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return customerDataService.addCustomer(customer);
 	}
 	public boolean deleteCustomer(CustomerPO customer) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return customerDataService.deleteCustomer(customer);
 	}
 	public boolean updateCustomer(CustomerPO customer) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return customerDataService.updateCustomer(customer);
 	}
 	public CustomerPO findCustomer(String customerID) throws RemoteException {
-		// TODO Auto-generated method stub
-		return null;
+		return customerDataService.findCustomer(customerID);
 	}
 	public SystemManagerPO findManager(String managerID) throws RemoteException {
-		// TODO Auto-generated method stub
-		return null;
+		return systemManagerDataService.findManager(managerID);
 	}
 	public boolean addManager(SystemManagerPO managerPO) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return systemManagerDataService.addManager(managerPO);
 	}
 	public boolean deleteManager(SystemManagerPO systemManagerPO) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return systemManagerDataService.deleteManager(systemManagerPO);
 	}
 	public boolean updateManager(SystemManagerPO managerPO) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return systemManagerDataService.updateManager(managerPO);
 	}
 	public boolean addStaff(SystemStaffPO staffPO) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return systemStaffDataService.addStaff(staffPO);
 	}
 	public boolean updateStaff(SystemStaffPO staffPO) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return systemStaffDataService.updateStaff(staffPO);
 	}
 	public boolean deleteStaff(SystemStaffPO staffPO) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return systemStaffDataService.deleteStaff(staffPO);
 	}
 	public SystemStaffPO findStaff(String staffID) throws RemoteException {
-		// TODO Auto-generated method stub
-		return null;
+		return systemStaffDataService.findStaff(staffID);
 	}
 	public boolean addStaff(HotelStaffPO staffPO) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return hotelStaffDataService.addStaff(staffPO);
 	}
 	public boolean updateStaff(HotelStaffPO staffPO) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		return hotelStaffDataService.updateStaff(staffPO);
 	}
 	public boolean deleteStaff(HotelStaffPO staffPO) throws RemoteException {
-		// TODO Auto-generated method stub
-		return false;
+		
+		return hotelStaffDataService.deleteStaff(staffPO);
 	}
 	public HotelStaffPO findHotelStaff(String staffID) throws RemoteException {
-		// TODO Auto-generated method stub
-		return null;
+		return hotelStaffDataService.findHotelStaff(staffID);
 	}
-
-	
+	public ArrayList<CustomerPO> getAllCustomers() throws RemoteException {
+		return customerDataService.getAllCustomers();
+	}
+	public ArrayList<SystemStaffPO> getAllSystemStaffs() throws RemoteException {
+		return systemStaffDataService.getAllSystemStaffs();
+	}
+	public ArrayList<HotelStaffPO> getAllHotelStaffs() throws RemoteException {
+		return hotelStaffDataService.getAllHotelStaffs();
+	}
+	public ArrayList<AdviceFeedBackPO> getAllAdvices() throws RemoteException {
+		return advice.getAllAdvices();
+	}
+	public ArrayList<HotelPO> getAllHotels() throws RemoteException {
+		return hotel.getAllHotels();
+	}
+	public ArrayList<SystemStrategyPO> getAllStrategys() throws RemoteException {
+		return systemstrategy.getAllStrategys();
+	}
 
 }
