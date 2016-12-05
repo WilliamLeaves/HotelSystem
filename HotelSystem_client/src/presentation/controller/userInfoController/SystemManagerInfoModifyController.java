@@ -1,6 +1,5 @@
 package presentation.controller.userInfoController;
 
-import VO.CustomerVO;
 import VO.SystemManagerVO;
 import blservice.UserInfo_blservice;
 import blservice.impl.UserInfo_bl;
@@ -9,7 +8,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import main.Main;
-import other.ResultMessage;
 
 public class SystemManagerInfoModifyController {
 

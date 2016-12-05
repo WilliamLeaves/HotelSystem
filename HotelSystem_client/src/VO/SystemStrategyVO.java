@@ -1,10 +1,7 @@
 package VO;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
-import PO.SystemStaffPO;
-import PO.SystemStrategyPO;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import other.StrategyState;
@@ -23,7 +20,7 @@ public class SystemStrategyVO {
      private String systemStrategyName;
      private SystemStrategyType systemStrategyType;
      private String systemStrategyDescription;
-    private StrategyState strategyState;
+     private StrategyState strategyState;
      private double discount;
      private LocalDateTime begin_date;
      private LocalDateTime end_date;

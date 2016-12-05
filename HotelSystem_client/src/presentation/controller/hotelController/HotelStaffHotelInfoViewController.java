@@ -1,6 +1,7 @@
 package presentation.controller.hotelController;
 
 import VO.HotelInfoVO;
+import VO.HotelStaffVO;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -18,7 +19,7 @@ public class HotelStaffHotelInfoViewController {
 	@FXML
 	private Label leftNameLabel;
 	@FXML
-	private Button  modifyHotelInfo;//ÐÞ¸Ä¾ÆµêÐÅÏ¢
+	private Button modifyHotelInfo;// ÐÞ¸Ä¾ÆµêÐÅÏ¢
 	@FXML
 	private Button back;
 	@FXML
@@ -36,23 +37,27 @@ public class HotelStaffHotelInfoViewController {
 	@FXML
 	private Label strategy;
 	@FXML
-	private Label grade;//¾ÆµêÐÇ¼¶
+	private Label grade;// ¾ÆµêÐÇ¼¶
 	@FXML
-	private Label tag;//¾Æµê±êÇ©
+	private Label tag;// ¾Æµê±êÇ©
 	@FXML
-	private Label restRoomNumber;//Ê£Óà¿Í·¿ÊýÁ¿
+	private Label restRoomNumber;// Ê£Óà¿Í·¿ÊýÁ¿
 	@FXML
 	private Label price;
-	
-	public HotelStaffHotelInfoViewController(){		
+
+	private Main mainScene;
+	private HotelInfoVO hotel;
+
+	public HotelStaffHotelInfoViewController() {
 	}
-	
+
 	public void HotelStaffHotelInfoViewShow(Main mainScene) {
 
 	}
 
-	public void initialize(Main main, HotelInfoVO hotel) {
+	public void initialize(Main main, HotelStaffVO hotelStaff, HotelInfoVO hotel) {
 		// TODO Auto-generated method stub
-		
+		this.mainScene = main;
+		this.hotel = hotel;
 	}
 }

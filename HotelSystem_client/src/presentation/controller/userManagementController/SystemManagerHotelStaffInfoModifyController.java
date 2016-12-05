@@ -8,7 +8,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import main.Main;
-import other.ResultMessage;
 
 public class SystemManagerHotelStaffInfoModifyController {
 

@@ -1,15 +1,12 @@
 package presentation.controller.userInfoController;
 
-import VO.CustomerVO;
 import VO.HotelStaffVO;
 import blservice.UserInfo_blservice;
 import blservice.impl.UserInfo_bl;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
 import main.Main;
-import other.ResultMessage;
 
 public class HotelStaffInfoController {
 
@@ -61,5 +58,8 @@ public class HotelStaffInfoController {
 
 	public void handlePasswordModify() {
 		this.mainScene.showHotelStaffPasswordModifyScene(hotelStaff);
+	}
+	public void handleBack(){
+		this.mainScene.showHotelStaffMainScene(hotelStaff);
 	}
 }

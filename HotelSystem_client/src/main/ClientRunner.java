@@ -5,12 +5,13 @@ import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import RMI.RemoteHelper;
-import TestRMI.testLogin;
+
 
 
 
 public class ClientRunner {
 	private RemoteHelper remoteHelper;
+	private Main main;
 	
 	public ClientRunner() {
 		linkToServer();
@@ -29,8 +30,8 @@ public class ClientRunner {
 			e.printStackTrace();
 		} 
 	}
-	public static void main(String[] args){
-		ClientRunner cr = new ClientRunner();
-		testLogin.ad();
-	}
+//	public static void main(String[] args){
+//		ClientRunner cr = new ClientRunner();
+//		cr.main.launch(args);
+//	}
 }
