@@ -20,7 +20,7 @@
                   <Label fx:id="leftNameLabel" layoutX="95.0" layoutY="210.0" text="Label" />
                   <Label layoutX="33.0" layoutY="240.0" text="身份" />
                   <Label layoutX="95.0" layoutY="240.0" text="酒店工作人员" />
-                  <Button fx:id="viewOrder" layoutX="10.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleViewOrder" prefHeight="39.0" prefWidth="200.0" text="当前酒店订单" />
+                  <Button fx:id="viewOrder" layoutX="10.0" layoutY="299.0" mnemonicParsing="false" onAction="#handleViewOrder" prefHeight="39.0" prefWidth="200.0" text="当前酒店订单" />
                   <Button fx:id="maintainHotelInfo" layoutX="10.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleMaintainHotelInfo" prefHeight="39.0" prefWidth="200.0" text="维护酒店信息" />
                   <Button fx:id="exit" layoutX="11.0" layoutY="545.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="39.0" prefWidth="200.0" text="注销" />
                   <Button fx:id="makeStrategy" layoutX="10.0" layoutY="390.0" mnemonicParsing="false" onAction="#handleMakeStrategy" prefHeight="39.0" prefWidth="200.0" text="制定酒店促销策略" />
