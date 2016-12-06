@@ -1,5 +1,7 @@
 package blservice.impl;
 
+import java.util.ArrayList;
+
 import PO.CustomerPO;
 import PO.HotelPO;
 import PO.HotelStaffPO;
@@ -124,4 +126,20 @@ public class UserManagement_bl implements UserManagement_blservice {
 			return false;
 		}
 	}
+
+	public ArrayList<CustomerVO> getAllCustomers() {
+		try {
+			ArrayList<CustomerPO> list = RemoteHelper.getInstance().getCustomerDataService().getAllCustomers();
+			ArrayList<CustomerVO> arrayList = new ArrayList<CustomerVO>();
+			for(int i=0;i<list.size();i++){
+				CustomerVO customerVO = new CustomerVO(list.get(i));
+				arrayList.add(customerVO);
+			}
+			return arrayList;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
 }

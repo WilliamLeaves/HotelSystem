@@ -17,7 +17,11 @@ public class OrderPO {
 	private String orderInfo;
 	private double price;
 
+<<<<<<< HEAD
+	// 鹿鹿脭矛路陆路篓
+=======
 	// 构造方法
+>>>>>>> refs/remotes/origin/master
 	public OrderPO() {
 	}
 

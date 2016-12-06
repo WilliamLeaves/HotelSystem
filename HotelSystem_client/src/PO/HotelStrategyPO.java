@@ -5,7 +5,7 @@ import VO.HotelStrategyVO;
 public class HotelStrategyPO {
 	private String id;
 	private String hotelStrategyInfo;
-	String hotelID;
+	private String hotelID;
 
 	/**
 	 * 
@@ -20,7 +20,7 @@ public class HotelStrategyPO {
 	}
 	
 	public HotelStrategyPO(HotelStrategyVO hotelStrategyVO){
-	
+	   
 	}
 	
 	public String getId() {

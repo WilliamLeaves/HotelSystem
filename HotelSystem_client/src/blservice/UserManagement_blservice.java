@@ -1,5 +1,7 @@
 package blservice;
 
+import java.util.ArrayList;
+
 import VO.CustomerVO;
 import VO.HotelInfoVO;
 import VO.HotelStaffVO;
@@ -49,4 +51,6 @@ public interface UserManagement_blservice {
 	public boolean addHotel(HotelInfoVO hotelInfoVO);
 	
     public boolean addHotelStaff(HotelStaffVO hotelStaffVO);
+    
+    public ArrayList<CustomerVO> getAllCustomers();
 }
