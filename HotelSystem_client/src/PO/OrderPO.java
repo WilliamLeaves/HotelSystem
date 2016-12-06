@@ -12,13 +12,13 @@ public class OrderPO {
 	private String userId;
 	private OrderState status;
 	private Date entryTime;
-	private Date lastTime;
+	private int lastTime;
 	private String orderInfo;
 	private double price;
 	
 	//构造方法
 	public OrderPO(){}
-	public OrderPO(String Id,String htId,String userId,OrderState st,Date entry,Date last,String info,int pr){
+	public OrderPO(String Id,String htId,String userId,OrderState st,Date entry,int last,String info,int pr){
 		super();
 		this.id = Id;
 		this.hotelId =htId;
@@ -72,10 +72,10 @@ public class OrderPO {
 	public void setEntryTime(Date entryTime) {
 		this.entryTime = entryTime;
 	}
-	public Date getLastTime() {
+	public int getLastTime() {
 		return lastTime;
 	}
-	public void setLastTime(Date lastTime) {
+	public void setLastTime(int lastTime) {
 		this.lastTime = lastTime;
 	}
 	public String getOrderInfo() {
