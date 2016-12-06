@@ -1,8 +1,7 @@
 package blservice;
 
-import java.util.Date;
+import VO.CustomerVO;
 
 public interface Register_blservice {
-
-	public Boolean addRegister(String userID, String userpassword, String district, Date birthday);
+   public boolean addRegister(CustomerVO customerVO);
 }

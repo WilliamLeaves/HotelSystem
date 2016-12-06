@@ -10,8 +10,19 @@ import blservice.SystemStrategy_blservice;
 public class SystemStrategy_bl implements SystemStrategy_blservice{
 
 	public ArrayList<SystemStrategyVO> getAllSystemStrategys() {
-		
-		return null;
+		try{
+			ArrayList<SystemStrategyPO> arrayList = RemoteHelper.getInstance().getSystemStrategyDataService()
+					.getAllStrategys();
+			ArrayList<SystemStrategyVO> list = new ArrayList<SystemStrategyVO>();
+			for(int i=0;i<arrayList.size();i++){
+				SystemStrategyVO strategyVO = new SystemStrategyVO(arrayList.get(i));
+				list.add(strategyVO);
+			}
+			return list;
+		}catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 
 	public SystemStrategyVO getSystemStrategy(String systemStrategy_Name) {
