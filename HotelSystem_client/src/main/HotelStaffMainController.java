@@ -89,7 +89,7 @@ public class HotelStaffMainController {
 	}
 
 	public void handleMaintainHotelInfo() {
-		this.mainScene.showHotelStaffHotelInfoViewScene(this.hotelService.getHotelInfo(this.hotelStaff.getHotelId()));
+		this.mainScene.showHotelStaffHotelInfoViewScene(hotelStaff, this.hotelService.getHotelInfo(this.hotelStaff.getHotelId()));
 	}
 
 	public void handleMakeStrategy() {
