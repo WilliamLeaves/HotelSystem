@@ -62,17 +62,22 @@ public class HotelStaffMainController {
 		this.mainScene = main;
 		this.hotelStaff = hotelStaff;
 		// 表格方法
-//		this.orderList = this.orderService.getOrderOfToday(this.hotelStaff.getHotelId());
-//		int count = 0;
-//
-//		while (count < this.orderList.size()) {
-//			this.orderData.add(this.orderList.get(count));
-//			count++;
-//		}
-//		this.customerId.setCellValueFactory(cellData -> cellData.getValue().getCustomerIDProperty());
-//		this.roomInfo.setCellValueFactory(cellData -> cellData.getValue().getRoomInfoProperty());
-//		this.arriveTime.setCellValueFactory(cellData -> cellData.getValue().getEntryTimeProperty());
-//		this.orderDuration.setCellValueFactory(cellData -> cellData.getValue().getLastTimeProperty());
+		// this.orderList =
+		// this.orderService.getOrderOfToday(this.hotelStaff.getHotelId());
+		// int count = 0;
+		//
+		// while (count < this.orderList.size()) {
+		// this.orderData.add(this.orderList.get(count));
+		// count++;
+		// }
+		// this.customerId.setCellValueFactory(cellData ->
+		// cellData.getValue().getCustomerIDProperty());
+		// this.roomInfo.setCellValueFactory(cellData ->
+		// cellData.getValue().getRoomInfoProperty());
+		// this.arriveTime.setCellValueFactory(cellData ->
+		// cellData.getValue().getEntryTimeProperty());
+		// this.orderDuration.setCellValueFactory(cellData ->
+		// cellData.getValue().getLastTimeProperty());
 
 		this.HotelStaffMainShow();
 	}
@@ -81,7 +86,7 @@ public class HotelStaffMainController {
 		this.leftIdLabel.setText(this.hotelStaff.getId());
 		this.leftNameLabel.setText(this.hotelStaff.getUsername());
 		this.hotelName.setText(this.hotelStaff.getHotelName());
-		//this.orderTable.setItems(orderData);
+		// this.orderTable.setItems(orderData);
 	}
 
 	public void handleViewOrder() {
@@ -89,11 +94,13 @@ public class HotelStaffMainController {
 	}
 
 	public void handleMaintainHotelInfo() {
-		this.mainScene.showHotelStaffHotelInfoViewScene(hotelStaff, this.hotelService.getHotelInfo(this.hotelStaff.getHotelId()));
+		this.mainScene.showHotelStaffHotelInfoViewScene(hotelStaff,
+				this.hotelService.getHotelInfo(this.hotelStaff.getHotelId()));
 	}
 
 	public void handleMakeStrategy() {
-		this.mainScene.showHotelStrategyViewScene(this.hotelService.getHotelInfo(this.hotelStaff.getHotelId()));
+		this.mainScene.showHotelStrategyViewScene(hotelStaff,
+				this.hotelService.getHotelInfo(this.hotelStaff.getHotelId()));
 	}
 
 	public void handleMaintainPersonalInfo() {

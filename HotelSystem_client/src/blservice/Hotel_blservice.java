@@ -44,4 +44,5 @@ public interface Hotel_blservice {
 
 	public ArrayList<HotelInfoVO> getHotelFromName(String text);
 
+
 }

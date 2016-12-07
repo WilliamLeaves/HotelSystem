@@ -20,8 +20,8 @@
                   <Label fx:id="leftNameLabel" layoutX="95.0" layoutY="210.0" text="Label" />
                   <Label layoutX="33.0" layoutY="240.0" text="身份" />
                   <Label layoutX="95.0" layoutY="240.0" text="酒店工作人员" />
-                  <Button fx:id="save" layoutX="10.0" layoutY="290.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="200.0" text="保存" />
-                  <Button fx:id="back" layoutX="11.0" layoutY="545.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="200.0" text="取消并返回" />
+                  <Button fx:id="save" layoutX="10.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="39.0" prefWidth="200.0" text="保存" />
+                  <Button fx:id="back" layoutX="11.0" layoutY="545.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="39.0" prefWidth="200.0" text="取消并返回" />
                </children>
             </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
@@ -34,8 +34,8 @@
                   <Label layoutX="10.0" layoutY="563.0" prefHeight="28.0" prefWidth="506.0" text="状态栏" />
                   <ImageView fx:id="hotelPicture1" fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true" />
                   <ImageView fx:id="hotelPicture2" fitHeight="150.0" fitWidth="200.0" layoutX="263.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true" />
-                  <Button fx:id="changePicture1" layoutX="115.0" layoutY="233.0" mnemonicParsing="false" text="修改图片1" />
-                  <Button fx:id="Button" layoutX="327.0" layoutY="233.0" mnemonicParsing="false" text="修改图片2" />
+                  <Button fx:id="changePicture1" layoutX="115.0" layoutY="233.0" mnemonicParsing="false" onAction="#handleChangePicture1" text="修改图片1" />
+                  <Button fx:id="Button" layoutX="327.0" layoutY="233.0" mnemonicParsing="false" onAction="#handleChangePicture2" text="修改图片2" />
                   <Label layoutX="42.0" layoutY="290.0" text="酒店名称">
                      <font>
                         <Font size="14.0" />
@@ -56,20 +56,15 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <MenuButton layoutX="151.0" layoutY="440.0" mnemonicParsing="false" text="房间类型">
+                  <MenuButton fx:id="roomTypeButton" layoutX="151.0" layoutY="440.0" mnemonicParsing="false" text="房间类型">
                     <items>
-                      <MenuItem mnemonicParsing="false" text="双人间" />
-                      <MenuItem mnemonicParsing="false" text="大床房" />
-                        <MenuItem mnemonicParsing="false" text="单人间" />
-                        <MenuItem mnemonicParsing="false" text="多人间" />
+                      <MenuItem fx:id="doubleRoomButton" mnemonicParsing="false" onAction="#handleMenuDoubleRoom" text="双人间" />
+                      <MenuItem fx:id="bigRoomButton" mnemonicParsing="false" onAction="#handleMenuBigRoom" text="大床房" />
+                        <MenuItem fx:id="singleRoomButton" mnemonicParsing="false" onAction="#handleMenuSingleRoom" text="单人间" />
+                        <MenuItem fx:id="multiRoomButton" mnemonicParsing="false" onAction="#handleMenuMultiRoom" text="多人间" />
                     </items>
                   </MenuButton>
-                  <Label layoutX="306.0" layoutY="443.0" text="Label">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <TextField layoutX="259.0" layoutY="498.0" prefHeight="23.0" prefWidth="129.0" />
+                  <TextField fx:id="roomPriceField" layoutX="259.0" layoutY="498.0" prefHeight="23.0" prefWidth="129.0" />
                   <Label layoutX="177.0" layoutY="500.0" text="单价">
                      <font>
                         <Font size="14.0" />
@@ -80,9 +75,8 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button layoutX="259.0" layoutY="468.0" mnemonicParsing="false" text="+" />
-                  <Button layoutX="363.0" layoutY="468.0" mnemonicParsing="false" text="-" />
-                  <TextField layoutX="296.0" layoutY="468.0" prefHeight="23.0" prefWidth="56.0" />
+                  <Button fx:id="plus" layoutX="259.0" layoutY="468.0" mnemonicParsing="false" onAction="#handlePlus" text="+" />
+                  <Button fx:id="minus" layoutX="363.0" layoutY="468.0" mnemonicParsing="false" onAction="#handleMinus" text="-" />
                   <Label layoutX="399.0" layoutY="501.0" text="元">
                      <font>
                         <Font size="14.0" />
@@ -91,6 +85,11 @@
                   <TextField fx:id="hotelName" layoutX="126.0" layoutY="288.0" prefHeight="23.0" prefWidth="349.0" />
                   <TextField fx:id="address" layoutX="126.0" layoutY="318.0" prefHeight="23.0" prefWidth="349.0" />
                   <TextArea fx:id="description" layoutX="126.0" layoutY="351.0" prefHeight="80.0" prefWidth="349.0" wrapText="true" />
+                  <Label fx:id="roomNum" layoutX="319.0" layoutY="470.0" text="0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
          </items>

@@ -67,7 +67,14 @@ public class Main extends Application {
 		// this.showCustomerHotelViewScene(new CustomerVO());
 		// this.showCustomerMainScene(new CustomerVO());
 		// this.showLoginScene();
-		this.showHotelStaffMainScene(new HotelStaffVO());
+
+		// this.showHotelStaffMainScene(new HotelStaffVO());
+		// this.showHotelStaffHotelInfoViewScene(new HotelStaffVO(), new
+		// HotelInfoVO());
+		// this.showHotelStaffHotelInfoModifyScene(new HotelStaffVO(), new
+		// HotelInfoVO());
+
+		this.showHotelStaffOrderViewScene(new HotelStaffVO());
 	}
 
 	public void Exit() {
@@ -516,7 +523,7 @@ public class Main extends Application {
 	 * 
 	 * @param hotel
 	 */
-	public void showHotelStaffHotelInfoViewScene(HotelStaffVO hotelStaff,HotelInfoVO hotel) {
+	public void showHotelStaffHotelInfoViewScene(HotelStaffVO hotelStaff, HotelInfoVO hotel) {
 		try {
 			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
@@ -526,7 +533,7 @@ public class Main extends Application {
 
 			// get Controller
 			HotelStaffHotelInfoViewController HotelStaffHotelInfoViewController = loader.getController();
-			HotelStaffHotelInfoViewController.initialize(this, hotelStaff,hotel);
+			HotelStaffHotelInfoViewController.initialize(this, hotelStaff, hotel);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -538,7 +545,7 @@ public class Main extends Application {
 	 * 
 	 * @param hotel
 	 */
-	public void showHotelStaffHotelInfoModifyScene(HotelInfoVO hotel) {
+	public void showHotelStaffHotelInfoModifyScene(HotelStaffVO hotelStaff, HotelInfoVO hotel) {
 		try {
 			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
@@ -549,7 +556,7 @@ public class Main extends Application {
 
 			// get Controller
 			HotelStaffHotelInfoModifyController HotelStaffHotelInfoModifyController = loader.getController();
-			HotelStaffHotelInfoModifyController.initialize(this, hotel);
+			HotelStaffHotelInfoModifyController.initialize(this, hotelStaff, hotel);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -561,7 +568,7 @@ public class Main extends Application {
 	 * 
 	 * @param hotel
 	 */
-	public void showHotelStrategyViewScene(HotelInfoVO hotel) {
+	public void showHotelStrategyViewScene(HotelStaffVO hotelStaff, HotelInfoVO hotel) {
 		try {
 			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
@@ -572,7 +579,7 @@ public class Main extends Application {
 
 			// get Controller
 			HotelStrategyViewController HotelStrategyViewController = loader.getController();
-			HotelStrategyViewController.initialize(this, hotel);
+			HotelStrategyViewController.initialize(this, hotelStaff, hotel);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -584,7 +591,7 @@ public class Main extends Application {
 	 * 
 	 * @param hotel
 	 */
-	public void showHotelStrategyModifyScene(HotelInfoVO hotel) {
+	public void showHotelStrategyModifyScene(HotelStaffVO hotelStaff, HotelInfoVO hotel) {
 		try {
 			this.initRootLayout();
 			FXMLLoader loader = new FXMLLoader();
@@ -595,7 +602,7 @@ public class Main extends Application {
 
 			// get Controller
 			HotelStrategyModifyController HotelStrategyModifyController = loader.getController();
-			HotelStrategyModifyController.initialize(this, hotel);
+			HotelStrategyModifyController.initialize(this, hotelStaff, hotel);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

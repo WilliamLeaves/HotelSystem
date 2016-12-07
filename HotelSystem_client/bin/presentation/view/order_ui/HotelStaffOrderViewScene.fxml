@@ -20,16 +20,16 @@
                   <Label fx:id="leftNameLabel" layoutX="95.0" layoutY="210.0" text="Label" />
                   <Label layoutX="33.0" layoutY="240.0" text="身份" />
                   <Label layoutX="95.0" layoutY="240.0" text="酒店工作人员" />
-                  <Button fx:id="viewOrderInfo" layoutX="10.0" layoutY="290.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="200.0" text="查看订单详情" />
-                  <Button fx:id="Undo" layoutX="10.0" layoutY="340.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="200.0" text="待执行订单" />
-                  <Button fx:id="back" layoutX="11.0" layoutY="545.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="200.0" text="返回" />
-                  <Button fx:id="Exception" layoutX="10.0" layoutY="390.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="200.0" text="异常订单" />
-                  <Button fx:id="Done" layoutX="10.0" layoutY="440.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="200.0" text="已执行订单" />
+                  <Button fx:id="viewOrderInfo" layoutX="10.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleViewOrderInfo" prefHeight="39.0" prefWidth="200.0" text="查看订单详情" />
+                  <Button fx:id="Undo" layoutX="10.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleUndo" prefHeight="39.0" prefWidth="200.0" text="待执行订单" />
+                  <Button fx:id="back" layoutX="11.0" layoutY="545.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="39.0" prefWidth="200.0" text="返回" />
+                  <Button fx:id="Exception" layoutX="10.0" layoutY="390.0" mnemonicParsing="false" onAction="#handleException" prefHeight="39.0" prefWidth="200.0" text="异常订单" />
+                  <Button fx:id="Done" layoutX="10.0" layoutY="440.0" mnemonicParsing="false" onAction="#handleDone" prefHeight="39.0" prefWidth="200.0" text="已执行订单" />
                </children>
             </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Label fx:id="orderType" layoutX="122.0" layoutY="24.0" text="Label（订单类型而改变）">
+                  <Label fx:id="orderType" layoutX="181.0" layoutY="25.0" text="Label">
                      <font>
                         <Font size="24.0" />
                      </font>

@@ -1,6 +1,8 @@
 package presentation.controller.hotelStrategyController;
 
 import VO.HotelInfoVO;
+import VO.HotelStaffVO;
+import blservice.HotelStrategy_blservice;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -25,17 +27,36 @@ public class HotelStrategyViewController {
 	@FXML
 	private Text strategyInfo;
 
+	private Main mainscene;
+	private HotelInfoVO hotel;
+	private HotelStaffVO hotelStaff;
+	private HotelStrategy_blservice service;
+
 	public HotelStrategyViewController() {
 
 	}
 
-	public void HotelStrategyViewShow(Main mainScene) {
-
+	public void HotelStrategyViewShow() {
+		this.leftIdLabel.setText(this.hotelStaff.getId());
+		this.leftNameLabel.setText(this.hotelStaff.getUsername());
+		this.hotelName.setText(this.hotelStaff.getHotelName());
+		//this.strategyInfo.setText(this.service.getHotelStrategy(this.hotel.getHotelID()));
 	}
 
-	public void initialize(Main main, HotelInfoVO hotel) {
+	public void initialize(Main main, HotelStaffVO staff, HotelInfoVO hotel) {
 		// TODO Auto-generated method stub
-		
+		this.mainscene = main;
+		this.hotelStaff = staff;
+		this.hotel = hotel;
+		this.HotelStrategyViewShow();
 	}
 
+	public void handleModify() {
+
+		this.mainscene.showHotelStrategyModifyScene(hotelStaff, hotel);
+	}
+
+	public void handleBack() {
+		this.mainscene.showHotelStaffMainScene(hotelStaff);
+	}
 }

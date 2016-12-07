@@ -3,7 +3,7 @@ package other;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.persistence.Query;
+import javax.management.Query;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;

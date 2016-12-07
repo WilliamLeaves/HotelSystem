@@ -181,8 +181,7 @@ public class OrderVO {
 	public StringProperty getCustomerIDProperty() {
 		return new SimpleStringProperty(this.userID);
 	}
-	
-	
+
 	public StringProperty getOrderIDProperty() {
 		return new SimpleStringProperty(this.orderID);
 	}
@@ -222,6 +221,6 @@ public class OrderVO {
 
 	public StringProperty getRoomInfoProperty() {
 		// TODO Auto-generated method stub
-		return new SimpleStringProperty() ;
+		return new SimpleStringProperty(this.roomType.toString() + "*" + String.valueOf(this.getRoomNum()));
 	}
 }

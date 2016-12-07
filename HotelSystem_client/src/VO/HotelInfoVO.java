@@ -25,22 +25,22 @@ public class HotelInfoVO {
 	ArrayList<Label> labelList;
 	String[] orderListId;
 
-//	public HotelInfoVO() {
-//		super();
-//		this.hotelID = "500001";
-//		this.hotelName = "Nanjing Hotel";
-//		this.hotelDistrict = "新街口商圈";
-//		this.hotelStaffId = "200001";
-//		this.hotelAddress = "上海路63号";
-//		this.hotelDiscription = "  欢迎光临金陵饭店！我们将竭诚为您服务！";
-//		this.roomInfo = new HotelRoomInfoVO[4];
-//		roomInfo[0] = new HotelRoomInfoVO(RoomType.doublePersonRoom, 20, 15, 198);
-//		roomInfo[1] = new HotelRoomInfoVO(RoomType.bigBedRoom, 25, 12, 198);
-//		roomInfo[2] = new HotelRoomInfoVO(RoomType.singlePersonRoom, 45, 8, 120);
-//		roomInfo[3] = new HotelRoomInfoVO(RoomType.multiPersonRoom, 64, 33, 75);
-//
-//	}
-//
+	public HotelInfoVO() {
+		super();
+		this.hotelID = "500001";
+		this.hotelName = "Nanjing Hotel";
+		this.hotelDistrict = "新街口商圈";
+		this.hotelStaffId = "200001";
+		this.hotelAddress = "上海路63号";
+		this.hotelDiscription = "  欢迎光临金陵饭店！我们将竭诚为您服务！";
+		this.roomInfo = new HotelRoomInfoVO[4];
+		roomInfo[0] = new HotelRoomInfoVO(RoomType.doublePersonRoom, 20, 15, 198);
+		roomInfo[1] = new HotelRoomInfoVO(RoomType.bigBedRoom, 25, 12, 198);
+		roomInfo[2] = new HotelRoomInfoVO(RoomType.singlePersonRoom, 45, 8, 120);
+		roomInfo[3] = new HotelRoomInfoVO(RoomType.multiPersonRoom, 64, 33, 75);
+
+	}
+
 //	public HotelInfoVO(String hotelID) {
 //		super();
 //		if (hotelID == "500001") {

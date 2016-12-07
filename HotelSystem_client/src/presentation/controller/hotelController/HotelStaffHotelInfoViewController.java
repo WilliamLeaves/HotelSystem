@@ -2,6 +2,7 @@ package presentation.controller.hotelController;
 
 import VO.HotelInfoVO;
 import VO.HotelStaffVO;
+import blservice.Hotel_blservice;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -47,17 +48,47 @@ public class HotelStaffHotelInfoViewController {
 
 	private Main mainScene;
 	private HotelInfoVO hotel;
+	private HotelStaffVO hotelStaff;
+	private Hotel_blservice hotelService;
 
 	public HotelStaffHotelInfoViewController() {
 	}
 
-	public void HotelStaffHotelInfoViewShow(Main mainScene) {
+	public void HotelStaffHotelInfoViewShow() {
+		this.leftIdLabel.setText(this.hotelStaff.getId());
+		this.leftNameLabel.setText(this.hotelStaff.getUsername());
+		this.hotelName.setText(this.hotel.getHotelName());
+		this.address.setText(this.hotel.getHotelAddress());
+		this.district.setText(this.hotel.getHotelDistrict());
+		this.description.setText(this.hotel.getHotelDiscription());
+		
+		//bl层暂时还没实现的方法
+//		this.strategy.setText(this.hotelService.getHotelStrategy(this.hotel.getHotelID()));
+//		String[] tag = this.hotelService.getHotelTagAssessment(this.hotel.getHotelID());
+//		String tagListLabel = "";
+//		int count = 0;
+//		while (count < tag.length) {
+//			tagListLabel += tag[count];
+//			count++;
+//		}
+//		this.tag.setText(tagListLabel);
 
+		//this.price.setText(this.hotelService.getHotelRoomPrice(this.hotel.getHotelID()));
 	}
 
 	public void initialize(Main main, HotelStaffVO hotelStaff, HotelInfoVO hotel) {
 		// TODO Auto-generated method stub
 		this.mainScene = main;
 		this.hotel = hotel;
+		this.hotelStaff = hotelStaff;
+		this.HotelStaffHotelInfoViewShow();
+	}
+
+	public void handleBack() {
+		this.mainScene.showHotelStaffMainScene(hotelStaff);
+	}
+
+	public void handleModify() {
+		this.mainScene.showHotelStaffHotelInfoModifyScene(hotelStaff, hotel);
 	}
 }
