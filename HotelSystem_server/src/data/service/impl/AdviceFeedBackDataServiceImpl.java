@@ -2,13 +2,9 @@ package data.service.impl;
 
 import java.rmi.RemoteException;
 import java.util.ArrayList;
-
-import javax.enterprise.inject.New;
-
 import PO.AdviceFeedBackPO;
 import data.dao.AdviceFeedbackDao;
 import data.dao.DataFactory;
-import data.dao.impl.AdviceFeedbackDaoImpl;
 import data.dao.impl.DataFactoryImpl;
 import data.service.AdviceFeedBackDataService;
 

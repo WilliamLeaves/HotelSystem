@@ -12,6 +12,7 @@ import data.service.OrderDataService;
 import data.service.SystemManagerDataService;
 import data.service.SystemStaffDataService;
 import data.service.SystemStrategyDataService;
+import data.service.VipDataService;
 
 public class RemoteHelper {
 	private Remote remote;
@@ -59,5 +60,7 @@ public class RemoteHelper {
 	public LoginDataService getLoginDataService(){
 		return (LoginDataService)remote;
 	}
-	
+    public VipDataService getVipDataService(){
+    	return (VipDataService)remote;
+    }
 }

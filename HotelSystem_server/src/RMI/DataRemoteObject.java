@@ -15,6 +15,7 @@ import PO.OrderPO;
 import PO.SystemManagerPO;
 import PO.SystemStaffPO;
 import PO.SystemStrategyPO;
+import PO.VipPO;
 import data.service.AdviceFeedBackDataService;
 import data.service.CustomerDataService;
 import data.service.HotelDataService;
@@ -25,6 +26,7 @@ import data.service.OrderDataService;
 import data.service.SystemManagerDataService;
 import data.service.SystemStaffDataService;
 import data.service.SystemStrategyDataService;
+import data.service.VipDataService;
 import data.service.impl.AdviceFeedBackDataServiceImpl;
 import data.service.impl.CustomerDataServiceImpl;
 import data.service.impl.HotelDataServiceImpl;
@@ -35,10 +37,11 @@ import data.service.impl.OrderDataServiceImpl;
 import data.service.impl.SystemManagerDataServiceImpl;
 import data.service.impl.SystemStaffDataServiceImpl;
 import data.service.impl.SystemStrategyDataServiceImpl;
+import data.service.impl.VipDataServiceImpl;
 
 public class DataRemoteObject extends UnicastRemoteObject implements LoginDataService
 ,OrderDataService,HotelStrategyDataService,SystemStrategyDataService,HotelDataService,AdviceFeedBackDataService
-,HotelStaffDataService,SystemStaffDataService,SystemManagerDataService,CustomerDataService{
+,HotelStaffDataService,SystemStaffDataService,SystemManagerDataService,CustomerDataService,VipDataService{
 	
 	/**
 	 * 
@@ -54,7 +57,9 @@ public class DataRemoteObject extends UnicastRemoteObject implements LoginDataSe
 	private SystemStaffDataService systemStaffDataService;
 	private CustomerDataService customerDataService;
 	private HotelStaffDataService hotelStaffDataService;
+	private VipDataService vipDataService;
 	protected DataRemoteObject() throws RemoteException {
+		vipDataService = new VipDataServiceImpl();
 		customerDataService = new CustomerDataServiceImpl();
 		hotelStaffDataService = new HotelStaffDataServiceImpl();
 		systemManagerDataService = new SystemManagerDataServiceImpl();
@@ -211,6 +216,15 @@ public class DataRemoteObject extends UnicastRemoteObject implements LoginDataSe
 	}
 	public ArrayList<SystemStrategyPO> getAllStrategys() throws RemoteException {
 		return systemstrategy.getAllStrategys();
+	}
+	public boolean makeVip(VipPO vipPO) throws RemoteException {
+		return vipDataService.makeVip(vipPO);
+	}
+	public VipPO getVip(int grade) throws RemoteException {
+		return vipDataService.getVip(grade);
+	}
+	public boolean updateVip(VipPO vipPO) throws RemoteException {
+		return vipDataService.updateVip(vipPO);
 	}
 
 }

@@ -11,4 +11,5 @@ public interface DataFactory {
 	public SystemManagerDao getSystemManagerDao();
 	public SystemStaffDao getSystemStaffDao();
 	public SystemStrategyDao getSystemStrategyDao();
+	public VipDao getVipDao();
 }

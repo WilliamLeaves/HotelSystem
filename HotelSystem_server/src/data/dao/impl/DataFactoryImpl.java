@@ -11,6 +11,7 @@ import data.dao.OrderDao;
 import data.dao.SystemManagerDao;
 import data.dao.SystemStaffDao;
 import data.dao.SystemStrategyDao;
+import data.dao.VipDao;
 
 public class DataFactoryImpl implements DataFactory{
 
@@ -52,6 +53,10 @@ public class DataFactoryImpl implements DataFactory{
 
 	public SystemStrategyDao getSystemStrategyDao() {
 		return new SystemStrategyDaoImpl();
+	}
+
+	public VipDao getVipDao() {
+		return new VipDaoImpl();
 	}
 
 }
