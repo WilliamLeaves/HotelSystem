@@ -38,6 +38,7 @@ import data.service.impl.SystemManagerDataServiceImpl;
 import data.service.impl.SystemStaffDataServiceImpl;
 import data.service.impl.SystemStrategyDataServiceImpl;
 import data.service.impl.VipDataServiceImpl;
+import other.SystemStrategyType;
 
 public class DataRemoteObject extends UnicastRemoteObject implements LoginDataService
 ,OrderDataService,HotelStrategyDataService,SystemStrategyDataService,HotelDataService,AdviceFeedBackDataService
@@ -228,6 +229,9 @@ public class DataRemoteObject extends UnicastRemoteObject implements LoginDataSe
 	}
 	public ArrayList<VipPO> getAllVips()throws RemoteException{
 		return vipDataService.getAllVips();
+	}
+	public ArrayList<SystemStrategyPO> getSystemStrategys(SystemStrategyType strategyType) throws RemoteException {
+		return systemstrategy.getSystemStrategys(strategyType);
 	}
 
 }

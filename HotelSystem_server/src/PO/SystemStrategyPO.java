@@ -6,6 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import other.StrategyState;
+import other.SystemStrategyType;
+
 @Entity
 @Table(name = "systemstrategy")
 public class SystemStrategyPO {
@@ -14,6 +17,8 @@ public class SystemStrategyPO {
     private double discount;
     private Date begin_date;
     private Date end_date;
+    private SystemStrategyType type;
+    private StrategyState state;
     
     public SystemStrategyPO(){
     	super();
@@ -56,6 +61,18 @@ public class SystemStrategyPO {
 	
 	public void setEnd_date(Date end_date) {
 		this.end_date = end_date;
+	}
+	public SystemStrategyType getType() {
+		return type;
+	}
+	public void setType(SystemStrategyType type) {
+		this.type = type;
+	}
+	public StrategyState getState() {
+		return state;
+	}
+	public void setState(StrategyState state) {
+		this.state = state;
 	}
 
 }

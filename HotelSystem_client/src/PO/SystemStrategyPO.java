@@ -3,6 +3,8 @@ package PO;
 import java.util.Date;
 
 import VO.SystemStrategyVO;
+import other.StrategyState;
+import other.SystemStrategyType;
 
 public class SystemStrategyPO {
 
@@ -11,15 +13,18 @@ public class SystemStrategyPO {
     private double discount;
     private Date begin_date;
     private Date end_date;
-    
+    private SystemStrategyType strategyType;
+    private StrategyState state;
     public SystemStrategyPO(){
     }
     public SystemStrategyPO(SystemStrategyVO systemStrategyVO){
-    	this.systemStrategy_name = systemStrategyVO.getStrategy_name();
+    	this.systemStrategy_name = systemStrategyVO.getSystemStrategyName();
     	this.systemStaffId = systemStrategyVO.getSystemStaffID();
     	this.discount = systemStrategyVO.getDiscount();
     	this.begin_date = systemStrategyVO.getBegin_Date();
     	this.end_date = systemStrategyVO.getEnd_date();
+    	this.state = systemStrategyVO.getStrategyState();
+    	this.strategyType = systemStrategyVO.getSystemStrategyType();
     }
     public SystemStrategyPO(String systemstrategy_name,double count,Date begin,Date end,String systemStaffID){
     	this.systemStrategy_name=systemstrategy_name;
@@ -65,6 +70,18 @@ public class SystemStrategyPO {
 	}
 	public void setSystemStaffId(String systemStaffId) {
 		this.systemStaffId = systemStaffId;
+	}
+	public SystemStrategyType getStrategyType() {
+		return strategyType;
+	}
+	public void setStrategyType(SystemStrategyType strategyType) {
+		this.strategyType = strategyType;
+	}
+	public StrategyState getState() {
+		return state;
+	}
+	public void setState(StrategyState state) {
+		this.state = state;
 	}
 
 }

@@ -23,7 +23,7 @@ public class CustomerPO {
 		this.birthday = customerVO.getBirthday();
 		this.id = customerVO.getId();
 		this.userName = customerVO.getUsername();
-		this.phone = customerVO.getPhoneNum();
+		//是否需要电话号码
 		this.credit = customerVO.getCredit();
 		this.memberGrade = customerVO.getMemberGrade();
 	}

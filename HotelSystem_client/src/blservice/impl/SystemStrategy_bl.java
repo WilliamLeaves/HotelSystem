@@ -6,6 +6,7 @@ import PO.SystemStrategyPO;
 import RMI.RemoteHelper;
 import VO.SystemStrategyVO;
 import blservice.SystemStrategy_blservice;
+import other.SystemStrategyType;
 
 public class SystemStrategy_bl implements SystemStrategy_blservice{
 
@@ -65,6 +66,21 @@ public class SystemStrategy_bl implements SystemStrategy_blservice{
 		} catch (Exception e) {
 		     e.printStackTrace();
 		     return false;
+		}
+	}
+
+	public ArrayList<SystemStrategyVO> getSystemStrategys(SystemStrategyType systemStrategyType) {
+	    try{
+	    	ArrayList<SystemStrategyVO> strategyVOs = new ArrayList<SystemStrategyVO>();
+	    	ArrayList<SystemStrategyPO> strategyPOs = RemoteHelper.getInstance().getSystemStrategyDataService().getSystemStrategys(systemStrategyType);
+	    	for (int i = 0; i < strategyPOs.size(); i++) {
+				SystemStrategyVO strategyVO = new  SystemStrategyVO(strategyPOs.get(i));
+				strategyVOs.add(strategyVO);
+				return strategyVOs;
+			}
+	    }catch (Exception e) {
+		    e.printStackTrace();
+		    return null;
 		}
 	}
 

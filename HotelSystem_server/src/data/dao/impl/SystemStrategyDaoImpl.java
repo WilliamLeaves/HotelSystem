@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import PO.SystemStrategyPO;
 import data.dao.SystemStrategyDao;
+import other.SystemStrategyType;
 import other.hibernateUtil;
 
 public class SystemStrategyDaoImpl implements SystemStrategyDao{
@@ -56,6 +57,16 @@ public class SystemStrategyDaoImpl implements SystemStrategyDao{
 		   e.printStackTrace();
 		}
 		return list;
+	}
+
+	public ArrayList<SystemStrategyPO> getSystemStrategys(SystemStrategyType systemStrategyType) {
+		try {
+			ArrayList<SystemStrategyPO> systemStrategyPOs =(ArrayList<SystemStrategyPO>) hibernateUtil.findbySome("systemstrategy","SystemStrategyType",systemStrategyType);
+		    return systemStrategyPOs;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 
 }

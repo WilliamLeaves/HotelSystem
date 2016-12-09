@@ -94,12 +94,12 @@ public class hibernateUtil {
 			}
 		}
 	}
-	public static List findbySome(String classname,String some,Serializable realId){
+	public static List findbySome(String tablename,String some,Serializable realId){
 		Session session = null;
 		List list =null;
 		try{
 			session = hibernateUtil.getSession();
-			Query que = session.createQuery("from "+classname+" where "+some+" =:"+some);
+			Query que = session.createQuery("from "+tablename+" where "+some+" =:"+some);
 			que.setParameter(some, realId);
 			list = que.getResultList();
 		}catch(Exception e){

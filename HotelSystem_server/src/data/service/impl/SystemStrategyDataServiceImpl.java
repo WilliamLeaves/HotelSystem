@@ -8,6 +8,7 @@ import data.dao.DataFactory;
 import data.dao.SystemStrategyDao;
 import data.dao.impl.DataFactoryImpl;
 import data.service.SystemStrategyDataService;
+import other.SystemStrategyType;
 
 public class SystemStrategyDataServiceImpl implements SystemStrategyDataService {
 
@@ -34,6 +35,9 @@ public class SystemStrategyDataServiceImpl implements SystemStrategyDataService 
 	}
 	public ArrayList<SystemStrategyPO> getAllStrategys() throws RemoteException {
 		return service.getAllStrategys();
+	}
+	public ArrayList<SystemStrategyPO> getSystemStrategys(SystemStrategyType strategyType) throws RemoteException {
+		return service.getSystemStrategys(strategyType);
 	}
 
 }

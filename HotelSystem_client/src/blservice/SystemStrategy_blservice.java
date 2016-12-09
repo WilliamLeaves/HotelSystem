@@ -2,6 +2,7 @@ package blservice;
 
 import java.util.ArrayList;
 import VO.SystemStrategyVO;
+import other.SystemStrategyType;
 
 public interface SystemStrategy_blservice {
 	 
@@ -27,4 +28,6 @@ public interface SystemStrategy_blservice {
 	public boolean makeSystemStrategy(SystemStrategyVO systemstrategyvo);
 	
 	public boolean deleteSystemStrategy(SystemStrategyVO systemStrategyVO);
+	
+	public ArrayList<SystemStrategyVO> getSystemStrategys(SystemStrategyType systemStrategyType);
 }
