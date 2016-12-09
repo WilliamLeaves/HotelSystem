@@ -1,6 +1,7 @@
 package data.service.impl;
 
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 
 import PO.VipPO;
 import data.dao.DataFactory;
@@ -42,6 +43,14 @@ public class VipDataServiceImpl implements VipDataService{
 		e.printStackTrace();
 		return false;
 	}
+	}
+	public ArrayList<VipPO> getAllVips() throws RemoteException {
+		try{
+			return vipDao.getAllVips();
+		}catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 
 }

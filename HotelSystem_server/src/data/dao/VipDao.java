@@ -1,5 +1,7 @@
 package data.dao;
 
+import java.util.ArrayList;
+
 import PO.VipPO;
 
 public interface VipDao {
@@ -9,4 +11,6 @@ public interface VipDao {
 	public VipPO getVip(int grade);
 	
 	public boolean updateVip(VipPO vipPO);
+	
+	public ArrayList<VipPO> getAllVips();
 }
