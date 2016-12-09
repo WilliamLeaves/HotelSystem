@@ -226,5 +226,8 @@ public class DataRemoteObject extends UnicastRemoteObject implements LoginDataSe
 	public boolean updateVip(VipPO vipPO) throws RemoteException {
 		return vipDataService.updateVip(vipPO);
 	}
+	public ArrayList<VipPO> getAllVips()throws RemoteException{
+		return vipDataService.getAllVips();
+	}
 
 }
