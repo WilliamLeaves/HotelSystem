@@ -63,4 +63,23 @@ public class UserInfo_bl implements UserInfo_blservice{
 			return false;
 		}
 	}
+
+//	SystemManagerVO mana;
+//	public SystemManagerVO getSystemManagerInfo(String SystemManager_name) {
+//		
+//		return null;
+//	}
+//
+//	public boolean modifySystemManagerInfo(SystemManagerVO systemManager) {
+//		
+//		return null;
+//	}
+//
+//	public boolean CustomerinfoModify(CustomerVO Customer, CustemorInfoChangeVO VO) {
+//		return false;
+//	}
+//
+//	public boolean CustomerinfoShow(CustomerVO Customer) {
+//		return false;
+//	}
 }
